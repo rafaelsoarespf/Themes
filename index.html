@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Título-->
-    <title>Palheta de cores</title>
+    <title>Paleta de cores</title>
     <!--Favicon-->
     <link rel="shortcut icon" href="" type="image/x-icon" />
     <!--CSS-->
@@ -19,22 +19,69 @@
 <body>
     <header>
         <!--LOGO-->
-        <a href="#" class="logo">Palheta de cores</a>
+        <a href="#" class="logo">Paleta de cores</a>
         
         <!--ITENS DA NAVBAR-->
         <nav>
             <ul class="nav-itens">
-                <a href="#" class="ativo"><li class="nav-item">Item1</li></a>
-                <a href="#"><li class="nav-item">Item2</li></a>
-                <a href="#"><li class="nav-item">Item3</li></a>
-                <a href="#"><li class="nav-item">Item4</li></a>
+                <li class="nav-item"><a href="#" class="ativo">Item1</a></li>
+                <li class="nav-item"><a href="#">Item2</a></li>
+                <li class="nav-item"><a href="#">Item3</a></li>
+                <li class="nav-item"><a href="#">Item4</a></li>
             </ul>
         </nav>
-
     </header>
     
     <main>
+        <section>
+            <h1>Paleta de cores</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eligendi. Ullam, accusantium praesentium quod ipsa possimus dolorem amet omnis error, unde, molestiae eius perferendis laboriosam corrupti neque maiores nisi. At.</p>
+            
+            <!--background-color-->
+            <div class="color-item">
+                <input type="color" id="input-background-color" name="input-background-color" value="#ffffff" />
+                <label for="input-background-color">Cor do background</label>
+            </div>
 
+            <!--box-color-->
+            <div class="color-item">
+                <input type="color" id="input-box-color" name="input-box-color" value="#f9f9f9" />
+                <label for="input-box-color">Box-color</label>
+            </div>
+
+            <!--box2-color-->
+            <div class="color-item">
+                <input type="color" id="input-box2-color" name="input-box2-color" value="#f0f0f0" />
+                <label for="input-box2-color">Box2-color</label>
+            </div>
+
+            <!--box3-color-->
+            <div class="color-item">
+                <input type="color" id="input-box3-color" name="input-box3-color" value="#dddddd" />
+                <label for="input-box3-color">Box3-color</label>
+            </div>
+
+
+            <!--title-color-->
+            <div class="color-item">
+                <input type="color" id="input-title-color" name="input-title-color" value="#37352f" />
+                <label for="input-box-color">Cor do Título</label>
+            </div>
+
+            <!--text-color-->
+            <div class="color-item">
+                <input type="color" id="input-text-color" name="input-text-color" value="#474747" />
+                <label for="input-text-color">Cor do Texto</label>
+            </div>
+
+            <!--custom-color-->
+            <div class="color-item">
+                <input type="color" id="input-text-color" name="input-custom-color" value="#474747" />
+                <label for="input-custom-color">Cor de estilo</label>
+            </div>
+
+        
+        </section>
     </main>
 
     <footer>

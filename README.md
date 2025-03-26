@@ -1,1 +1,1 @@
-# Palheta-de-cores
+# Paleta-de-cores
