@@ -150,7 +150,7 @@ input[type="color"]{
 
 
 .color{
-  height: 150px;
+  height: 180px;
   color: #f0f0f0;
   display: flex;
   flex-direction:row;
@@ -182,8 +182,22 @@ input[type="color"]{
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.201);
+  width: 45px;
+  transition: width 0.5s ease-in-out; 
+  
 }
 
+
 .colors-flex > *:hover {
-  width: 300px;
+  width: 400px;
+  
+}
+
+.colors-flex .color span {
+  opacity: 0; /* O span será invisível por padrão */
+  transition: opacity 1s ease; /* Suaviza a transição de opacidade */
+}
+
+.colors-flex .color:hover span {
+  opacity: 1; /* O span ficará visível quando passar o mouse sobre a div */
 }
