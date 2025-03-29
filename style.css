@@ -8,9 +8,12 @@
   --colorBox3: #dddddd;
 
   --colorTitle: #37352f;
+  --colorSubtitle: #37352f;
   --colorText: #474747;
-  --colorTextStrong: #37352f;
   
+  --colorBorder: rgba(255, 255, 255, 0.2);
+
+  --colorCustom: #37352f; 
 
   --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
   --fonte-destaque: 'Bebas Neue', cursive;
@@ -33,7 +36,6 @@
     --fonte-android: 'idroid', cursive;
 }
 
-
 *{
     margin: 0px;
     padding:0px;
@@ -42,7 +44,6 @@
 body{
   background-color: var(--backgroundColor) !important;
 }
-
 
 /*header(navbar)============================================================================*/
 
@@ -122,6 +123,7 @@ main section{
   box-shadow: 0px 1px 12px rgba(35, 35, 35, 0.3);
   padding: 20px;
   border-radius: 10px;
+  border: 1px solid var(--colorBorder);
 }
 
 .color-setting-div-input{
@@ -131,11 +133,15 @@ main section{
 }
 
 .color-setting-div-input > input[type="color"]{
-  padding:0;
-  border: none;
   width: 64px;
   height: 64px;
+  border: none;
   margin-right: 5px;
+  cursor: pointer;
+}
+
+.color-setting-div-input label{
+  color: var(--colorText);
   cursor: pointer;
 }
 
@@ -149,27 +155,34 @@ main section{
   justify-content: space-between;
 }
 
-.color-palettes-box{
-  background-color: var(--colorBox);
-  box-shadow: 0px 1px 12px rgba(35, 35, 35, 0.3);
-  padding: 20px;
-  border-radius: 10px;
+#section-color-palettes .color-palettes-box{
   width: 590px;
+  padding: 20px;
+
+  background-color: var(--colorBox);
+  
+  border: 1px solid var(--colorBorder);
+  border-radius: 10px;
+  box-shadow: 0px 1px 12px rgba(35, 35, 35, 0.3);
+}
+
+#section-color-palettes h2{
+  color: var(--colorTitle);
 }
 
 #section-color-palettes .div-colors{
   display: flex;
   flex-direction:row;
   flex-wrap: nowrap;
+  flex-grow: 1;
+  justify-items: stretch;
+
   border-radius: 10px;
   background-color: #37352f;
-  justify-items: stretch;
-  flex-grow: 1;
 }
 
-
 #section-color-palettes .color{
-  width: 45px;
+  width: 42px;
   height: 180px;
 
   display: flex;
@@ -184,16 +197,39 @@ main section{
 }
 
 #section-color-palettes .color:hover {
-  width: 400px;
+  width: 100%;
 }
 
 #section-color-palettes .color span {
   opacity: 0; 
-  transition: opacity 1s ease;
-  font: 500 1.2em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: opacity 0.5s ease;
+  font: 400 1.1em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
 }
 
 #section-color-palettes .color:hover span {
+  position: relative;
   opacity: 1;
 }
 
+#section-color-palettes .color .text-white{
+  color: #f9f9f9;
+}
+
+#section-color-palettes .color .text-black{
+  color: #474747;
+}
+
+.vertical-text {
+  transform: rotate(90deg);
+  font: bold 15px arial;
+  opacity: 0.3;
+  transition: opacity 1s ease, visibility 4s 5s;
+  position: relative ;
+  white-space: nowrap;
+}
+
+#section-color-palettes .color:hover .vertical-text{
+  position: absolute;
+  opacity: 0;
+}
