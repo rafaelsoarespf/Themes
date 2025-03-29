@@ -20,7 +20,7 @@
   --fonte-android: 'idroid', cursive;
 }
 
-.light-mode:root{
+.light-color:root{
   --colorBackground: #ffffff;
   --colorBox: #f9f9f9;
   --colorBox2: #f0f0f0;
@@ -42,7 +42,7 @@
 }
 
 body{
-  background-color: var(--backgroundColor) !important;
+  background-color: var(--colorBackground) !important;
 }
 
 /*header(navbar)============================================================================*/
@@ -57,7 +57,7 @@ header{
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid var(--colorBorder);
   backdrop-filter: blur(50px);
   z-index: 9;
   }
@@ -133,9 +133,11 @@ main section{
 }
 
 .color-setting-div-input > input[type="color"]{
-  width: 64px;
-  height: 64px;
+  width: 96px;
+  height: 40px;
   border: none;
+  outline: none;
+  background: #505050;
   margin-right: 5px;
   cursor: pointer;
 }
@@ -167,7 +169,7 @@ main section{
 }
 
 #section-color-palettes h2{
-  color: var(--colorTitle);
+  color: var(--colorSubtitle);
 }
 
 #section-color-palettes .div-colors{
@@ -178,7 +180,7 @@ main section{
   justify-items: stretch;
 
   border-radius: 10px;
-  background-color: #37352f;
+  background-color: #505050;
 }
 
 #section-color-palettes .color{
@@ -190,8 +192,6 @@ main section{
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-
-  border: 1px solid rgba(255, 255, 255, 0.201);
   
   transition: width 0.5s ease-in-out; 
 }
