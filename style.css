@@ -63,7 +63,7 @@ header{
   }
 
 header .logo{
-  color: var(--titleColor);
+  color: var(--colorTitle);
   font-weight: 700;
   text-decoration: none;
   font-size: 30px;
@@ -87,7 +87,7 @@ header .logo{
 .nav-item a{
   text-decoration: none;
   padding: 6px 15px;
-  color: var(--titleColor);
+  color: var(--colorSubtitle);
   border-radius: 20px;
 }
 
@@ -145,6 +145,12 @@ main section{
 .color-setting-div-input label{
   color: var(--colorText);
   cursor: pointer;
+}
+
+.color-setting-div-input > input[type="checkbox"]{
+  margin: 0px 2px 0px 10px;
+  width: 15px;
+  height: 15px;
 }
 
 

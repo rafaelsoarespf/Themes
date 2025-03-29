@@ -30,12 +30,14 @@ function alterarCor(elemento){
         case "input-title-color":
             let colorTitle = document.querySelector('#input-title-color').value;   
             document.documentElement.style.setProperty('--colorTitle', colorTitle);
+            document.querySelector('#checkbox-title-color').checked = false; 
             break;
 
         //subtitle
         case "input-subtitle-color":
             let colorSubtitle = document.querySelector('#input-subtitle-color').value;   
             document.documentElement.style.setProperty('--colorSubtitle', colorSubtitle);
+            document.querySelector('#checkbox-subtitle-color').checked = false;
             break;
 
         //text
@@ -48,6 +50,7 @@ function alterarCor(elemento){
         case "input-border-color":
             let colorBorder = document.querySelector('#input-border-color').value;   
             document.documentElement.style.setProperty('--colorBorder', colorBorder);
+            document.querySelector('#checkbox-border-color').checked = false;
             break;
 
         //Cor de estilo
@@ -56,6 +59,44 @@ function alterarCor(elemento){
             document.documentElement.style.setProperty('--colorCustom', colorCustom);
             break;
 
+    }
+}
+
+//
+function useCustomColor(elemento){
+
+    switch(elemento){
+
+        //title
+        case "checkbox-title-color":
+            let checkboxTitle = document.querySelector('#checkbox-title-color');
+            if(checkboxTitle.checked){  
+                document.documentElement.style.setProperty('--colorTitle', 'var(--colorCustom)');
+            }else{
+                alterarCor("input-title-color")
+            }
+            break;     
+        
+        //subtitle
+        case "checkbox-subtitle-color":
+            let checkboxSubtitle = document.querySelector('#checkbox-subtitle-color');
+            if(checkboxSubtitle.checked){  
+                document.documentElement.style.setProperty('--colorSubtitle', 'var(--colorCustom)');
+            }else{
+                alterarCor("input-subtitle-color")
+            }
+            break;    
+
+        //title
+        case "checkbox-border-color": 
+            let checkboxBorder = document.querySelector('#checkbox-border-color');
+            if(checkboxBorder.checked){  
+                document.documentElement.style.setProperty('--colorBorder', 'var(--colorCustom)');
+            }else{
+                alterarCor("input-border-color")
+            }
+            break;
 
     }
+    
 }
