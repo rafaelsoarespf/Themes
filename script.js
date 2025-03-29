@@ -100,3 +100,8 @@ function useCustomColor(elemento){
     }
     
 }
+
+//função copiar
+function copyColor(textColor){
+    navigator.clipboard.writeText(textColor)
+}

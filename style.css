@@ -186,7 +186,11 @@ main section{
   justify-items: stretch;
 
   border-radius: 10px;
-  background-color: #505050;
+  background-color: #ffffff;
+
+  cursor: pointer;
+
+  background-image: url('image/backgroundColorBox.png')
 }
 
 #section-color-palettes .color{
@@ -226,7 +230,7 @@ main section{
   color: #474747;
 }
 
-.vertical-text {
+#section-color-palettes .vertical-text {
   transform: rotate(90deg);
   font: bold 15px arial;
   opacity: 0.3;
@@ -238,4 +242,12 @@ main section{
 #section-color-palettes .color:hover .vertical-text{
   position: absolute;
   opacity: 0;
+}
+
+#section-color-palettes .border-radios-right{
+  border-radius: 10px 0px 0px 10px;
+}
+
+#section-color-palettes .border-radios-left{
+  border-radius: 0px 10px 10px 0px;
 }
