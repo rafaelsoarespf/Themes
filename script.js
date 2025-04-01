@@ -1,13 +1,11 @@
-function alterarCor(elemento){
-    
+function alterarCor(elemento){  
     switch(elemento){
-
         //background
         case "input-background-color":
             let colorBackground = document.querySelector('#input-background-color').value;   
             document.documentElement.style.setProperty('--colorBackground', colorBackground);
             break;
-
+        
         //box
         case "input-box-color":
             let colorBox = document.querySelector('#input-box-color').value;   
@@ -62,6 +60,39 @@ function alterarCor(elemento){
     }
 }
 
+function removeTheme(){
+    document.documentElement.style.setProperty('--colorBackground', null || ''); 
+    document.documentElement.style.setProperty('--colorBox', null || '');
+    document.documentElement.style.setProperty('--colorBox2', null || '');
+    document.documentElement.style.setProperty('--colorBox3', null || '');
+    document.documentElement.style.setProperty('--colorTitle', null || '');
+    document.documentElement.style.setProperty('--colorSubtitle', null || '');
+    document.documentElement.style.setProperty('--colorText', null || '');
+    document.documentElement.style.setProperty('--colorBorder', null || '');
+    document.documentElement.style.setProperty('--colorCustom', null || '');
+}
+
+//
+function applyColorTheme(theme){
+
+    let $html = document.querySelector('html');
+
+    removeTheme();
+
+    if(theme=="light-theme"){
+        $html.classList.remove('dark-theme');
+        $html.classList.add('light-theme');     
+    }
+
+    if(theme=="dark-theme"){
+        $html.classList.remove('light-theme');
+        $html.classList.add('dark-theme');      
+    }
+}
+
+
+
+
 //
 function useCustomColor(elemento){
 
@@ -97,8 +128,7 @@ function useCustomColor(elemento){
             }
             break;
 
-    }
-    
+    }    
 }
 
 //função copiar

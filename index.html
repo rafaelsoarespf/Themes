@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Título-->
-    <title>Paleta de cores</title>
+    <title>Temas de cores</title>
     <!--Favicon-->
     <link rel="shortcut icon" href="" type="image/x-icon" />
     <!--CSS-->
@@ -19,7 +19,7 @@
 <body>
     <header>
         <!--LOGO-->
-        <a href="#" class="logo">Paleta de cores</a>
+        <a href="#" class="logo">Temas de cores</a>
         
         <!--ITENS DA NAVBAR-->
         <nav>
@@ -36,7 +36,7 @@
 
         <!--section color-setting -->
         <section class="color-setting-box">
-            <h1>Paleta de cores</h1>
+            <h1>Temas de cores</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eligendi. Ullam, accusantium praesentium quod ipsa possimus dolorem amet omnis error, unde, molestiae eius perferendis laboriosam corrupti neque maiores nisi. At.</p>
             
             <!--background-color-->
@@ -95,6 +95,7 @@
                 <input type="color" id="input-custom-color" onchange="alterarCor('input-custom-color')" name="input-custom-color" value="#474747" />
                 <label for="input-custom-color">Cor de estilo</label>
             </div>
+            
         </section>
 
         <!--section color-palettes-->
@@ -122,32 +123,35 @@
                     <div class="color text-black" onclick="copyColor('#ffffff33')" style="background-color: #ffffff33"><span>#ffffff33</span><p class="vertical-text text-black">Borda</p></div>
                     <!--custom-color-->
                     <div class="color text-white border-radios-left" onclick="copyColor('#474747')" style="background-color: #474747"><span>#474747</span><p class="vertical-text text-white">Cor de estilo</p></div>
-                    
                 </div>
+                <button onclick="applyColorTheme('light-theme')">Aplicar</button>
             </div>
 
             <!--Light Color-->
             <div class="color-palettes-box mt-3">
-                <h2>Light Color</h2>
+                <h2>Dark Color</h2>
                 <div class="div-colors">
                     <!--background-color-->
-                    <div class="color text-black" style="background-color: #ffffff"><span>#ffffff</span><p class="vertical-text text-black">Background</p></div>
+                    <div class="color text-white border-radios-right" onclick="copyColor('#191919')" style="background-color: #191919"><span>#191919</span><p class="vertical-text text-white">Background</p></div>
                     <!--box-color-->
-                    <div class="color text-black" style="background-color: #f9f9f9"><span>#f9f9f9</span><p class="vertical-text text-black">Box</p></div>
+                    <div class="color text-white" onclick="copyColor('#202020')" style="background-color: #202020"><span>#202020</span><p class="vertical-text text-white">Box</p></div>
                     <!--box2-color-->
-                    <div class="color text-black" style="background-color: #f0f0f0"><span>#f0f0f0</span><p class="vertical-text text-black">Box 2</p></div>
+                    <div class="color text-white" onclick="copyColor('#2c2c2c')" style="background-color: #2c2c2c"><span>#2c2c2c</span><p class="vertical-text text-white">Box 2</p></div>
                     <!--box3-color-->
-                    <div class="color text-black" style="background-color: #dddddd"><span>#dddddd</span><p class="vertical-text text-black">Box 3</p></div>
-                    <!--title-color-->
-                    <div class="color text-white" style="background-color: #37352f"><span>#37352f</span><p class="vertical-text text-white">Título</p></div>
+                    <div class="color text-white" onclick="copyColor('#383838')" style="background-color: #383838"><span>#383838</span><p class="vertical-text text-white">Box 3</p></div>
+                    <!--title-color-->                
+                    <div class="color text-black" onclick="copyColor('#d4d4d4')" style="background-color: #d4d4d4"><span>#d4d4d4</span><p class="vertical-text text-black">Título</p></div>
                     <!--subtitle-color-->
-                    <div class="color text-white" style="background-color: #37352f"><span>#37352f</span><p class="vertical-text text-white">Subtítulo</p></div>
+                    <div class="color text-black" onclick="copyColor('#d4d4d4')" style="background-color: #d4d4d4"><span>#d4d4d4</span><p class="vertical-text text-black">Subtítulo</p></div>
                     <!--text-color-->
-                    <div class="color text-white" style="background-color: #474747"><span>#474747</span><p class="vertical-text text-white">Texto</p></div>
+                    <div class="color text-black" onclick="copyColor('#9b9b9b')" style="background-color: #9b9b9b"><span>#9b9b9b</span><p class="vertical-text text-black">Texto</p></div>
                     <!--border-color-->
-                    <div class="color text-white" style="background-color: #ffffff33"><span>#ffffff33</span><p class="vertical-text text-white">Borda</p></div>
+                    <div class="color text-black" onclick="copyColor('#ffffff33')" style="background-color: #ffffff33"><span>#ffffff33</span><p class="vertical-text text-black">Borda</p></div>
                     <!--custom-color-->
-                    <div class="color text-white" style="background-color: #474747"><span>#474747</span><p class="vertical-text text-white">Cor de estilo</p></div>
+                    <div class="color text-black border-radios-left" onclick="copyColor('#d4d4d4')" style="background-color: #d4d4d4"><span>#d4d4d4</span><p class="vertical-text text-black">Cor de estilo</p></div>
+                </div>
+                <button onclick="applyColorTheme('dark-theme')">Aplicar</button>
+
                 </div>
             </div>
 

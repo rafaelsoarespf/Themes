@@ -20,16 +20,38 @@
   --fonte-android: 'idroid', cursive;
 }
 
-.light-color:root{
+.light-theme:root{
   --colorBackground: #ffffff;
   --colorBox: #f9f9f9;
   --colorBox2: #f0f0f0;
   --colorBox3: #dddddd;
 
   --colorTitle: #37352f;
+  --colorSubtitle: #37352f;
   --colorText: #474747;
   
-  --colorCustom: #37352f;
+  --colorBorder: rgba(255, 255, 255, 0.2);
+
+  --colorCustom: #37352f; 
+
+  --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+  --fonte-destaque: 'Bebas Neue', cursive;
+  --fonte-android: 'idroid', cursive;
+}
+
+.dark-theme:root{
+  --colorBackground: #191919;
+  --colorBox: #202020;
+  --colorBox2: #2c2c2c;
+  --colorBox3: #383838;
+
+  --colorTitle: #d4d4d4;
+  --colorSubtitle: #d4d4d4;
+  --colorText: #9b9b9b;
+
+  --colorBorder: #ffffff33;
+  
+  --colorCustom: #d4d4d4;
 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Bebas Neue', cursive;
@@ -57,6 +79,7 @@ header{
   justify-content: space-between;
   align-items: center;
   background: transparent;
+  background-color: var(--colorBox);
   border-bottom: 2px solid var(--colorBorder);
   backdrop-filter: blur(50px);
   z-index: 9;
@@ -179,13 +202,14 @@ main section{
 }
 
 #section-color-palettes .div-colors{
+  
   display: flex;
   flex-direction:row;
   flex-wrap: nowrap;
   flex-grow: 1;
   justify-items: stretch;
 
-  border-radius: 10px;
+  border-radius: 30px;
   background-color: #ffffff;
 
   cursor: pointer;
@@ -251,3 +275,21 @@ main section{
 #section-color-palettes .border-radios-left{
   border-radius: 0px 10px 10px 0px;
 }
+
+#section-color-palettes button{
+  width: 100%;
+  height: 50px;
+  margin-top: 5px;
+  border: none;
+  background-color: var(--colorBox);
+  border-radius: 10px;
+  border: 1px  solid var(--colorCustom);
+  color: var(--colorCustom);
+  transition: background-color 0.5s;
+}
+
+#section-color-palettes button:hover{
+  background-color: var(--colorCustom);
+  color: var(--colorBox);
+}
+

@@ -1,1 +1,1 @@
-# Paleta-de-cores
+# Tema-de-cores
