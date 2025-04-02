@@ -2,33 +2,38 @@
 function changeColor(element){  
     switch(element){
         //background
-        case "input-background-color":
+        case "input-background-color": 
             let colorBackground = document.querySelector('#input-background-color').value;   
             document.documentElement.style.setProperty('--colorBackground', colorBackground);
+            document.querySelector('#input-background-color-value').innerHTML = colorBackground;
             break;
         
         //box
         case "input-box-color":
             let colorBox = document.querySelector('#input-box-color').value;   
             document.documentElement.style.setProperty('--colorBox', colorBox);
+            document.querySelector('#input-box-color-value').innerHTML = colorBox;
             break;
 
         //box2
         case "input-box2-color":
             let colorBox2 = document.querySelector('#input-box2-color').value;   
             document.documentElement.style.setProperty('--colorBox2', colorBox2);
+            document.querySelector('#input-box2-color-value').innerHTML = colorBox2;
             break;
         
         //box3
         case "input-box3-color":
             let colorBox3 = document.querySelector('#input-box3-color').value;   
             document.documentElement.style.setProperty('--colorBox3', colorBox3);
+            document.querySelector('#input-box3-color-value').innerHTML = colorBox3;
             break;
 
         //title
         case "input-title-color":
             let colorTitle = document.querySelector('#input-title-color').value;   
             document.documentElement.style.setProperty('--colorTitle', colorTitle);
+            document.querySelector('#input-title-color-value').innerHTML = colorTitle;
             document.querySelector('#checkbox-title-color').checked = false; 
             break;
 
@@ -36,6 +41,7 @@ function changeColor(element){
         case "input-subtitle-color":
             let colorSubtitle = document.querySelector('#input-subtitle-color').value;   
             document.documentElement.style.setProperty('--colorSubtitle', colorSubtitle);
+            document.querySelector('#input-subtitle-color-value').innerHTML = colorSubtitle;
             document.querySelector('#checkbox-subtitle-color').checked = false;
             break;
 
@@ -43,12 +49,14 @@ function changeColor(element){
         case "input-text-color":
             let colorText = document.querySelector('#input-text-color').value;   
             document.documentElement.style.setProperty('--colorText', colorText);
+            document.querySelector('#input-text-color-value').innerHTML = colorText;
             break;
 
         //border
         case "input-border-color":
             let colorBorder = document.querySelector('#input-border-color').value;   
             document.documentElement.style.setProperty('--colorBorder', colorBorder);
+            document.querySelector('#input-border-color-value').innerHTML = colorBorder;
             document.querySelector('#checkbox-border-color').checked = false;
             break;
 
@@ -56,12 +64,14 @@ function changeColor(element){
         case "input-shadow-color":
             let colorShadow = document.querySelector('#input-shadow-color').value;   
             document.documentElement.style.setProperty('--colorShadow', colorShadow);
+            document.querySelector('#input-shadow-color-value').innerHTML = colorShadow;
             break;
 
         //Custom color
         case "input-custom-color":
             let colorCustom = document.querySelector('#input-custom-color').value;   
             document.documentElement.style.setProperty('--colorCustom', colorCustom);
+            document.querySelector('#input-custom-color-value').innerHTML = colorCustom;
             break;
     }
 }
@@ -97,6 +107,7 @@ function updateColorInput(){
     let colorShadow = getComputedStyle(document.documentElement).getPropertyValue('--colorShadow').trim();
     let colorCustom = getComputedStyle(document.documentElement).getPropertyValue('--colorCustom').trim();
     
+    //alterando cor do input
     document.querySelector('#input-background-color').value = colorBackground;
     document.querySelector('#input-box-color').value = colorBox;
     document.querySelector('#input-box2-color').value = colorBox2;
@@ -107,6 +118,18 @@ function updateColorInput(){
     document.querySelector('#input-border-color').value = colorBorder;
     document.querySelector('#input-shadow-color').value = colorShadow;
     document.querySelector('#input-custom-color').value = colorCustom;
+
+    //alterando span de codigo de texto 
+    document.querySelector('#input-background-color-value').innerHTML = colorBackground;
+    document.querySelector('#input-box-color-value').innerHTML = colorBox;
+    document.querySelector('#input-box2-color-value').innerHTML = colorBox2;
+    document.querySelector('#input-box3-color-value').innerHTML = colorBox3;
+    document.querySelector('#input-title-color-value').innerHTML = colorTitle;
+    document.querySelector('#input-subtitle-color-value').innerHTML = colorSubtitle;
+    document.querySelector('#input-text-color-value').innerHTML = colorText;
+    document.querySelector('#input-border-color-value').innerHTML = colorBorder;
+    document.querySelector('#input-shadow-color-value').innerHTML = colorShadow;
+    document.querySelector('#input-custom-color-value').innerHTML = colorCustom;
 }
 
 //===========================================================================================
@@ -145,7 +168,7 @@ function useCustomColor(elemento){
             if(checkboxTitle.checked){  
                 document.documentElement.style.setProperty('--colorTitle', 'var(--colorCustom)');
             }else{
-                alterarCor("input-title-color")
+                changeColor("input-title-color")
             }
             break;     
         
@@ -155,7 +178,7 @@ function useCustomColor(elemento){
             if(checkboxSubtitle.checked){  
                 document.documentElement.style.setProperty('--colorSubtitle', 'var(--colorCustom)');
             }else{
-                alterarCor("input-subtitle-color")
+                changeColor("input-subtitle-color")
             }
             break;    
 
@@ -165,7 +188,7 @@ function useCustomColor(elemento){
             if(checkboxBorder.checked){  
                 document.documentElement.style.setProperty('--colorBorder', 'var(--colorCustom)');
             }else{
-                alterarCor("input-border-color")
+                changeColor("input-border-color")
             }
             break;
     }    
