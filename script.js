@@ -1,5 +1,6 @@
-function alterarCor(elemento){  
-    switch(elemento){
+//===========================================================================================
+function changeColor(element){  
+    switch(element){
         //background
         case "input-background-color":
             let colorBackground = document.querySelector('#input-background-color').value;   
@@ -56,11 +57,11 @@ function alterarCor(elemento){
             let colorCustom = document.querySelector('#input-custom-color').value;   
             document.documentElement.style.setProperty('--colorCustom', colorCustom);
             break;
-
     }
 }
 
-function removeTheme(){
+//===========================================================================================
+function resetTheme(){
     document.documentElement.style.setProperty('--colorBackground', null || ''); 
     document.documentElement.style.setProperty('--colorBox', null || '');
     document.documentElement.style.setProperty('--colorBox2', null || '');
@@ -70,34 +71,56 @@ function removeTheme(){
     document.documentElement.style.setProperty('--colorText', null || '');
     document.documentElement.style.setProperty('--colorBorder', null || '');
     document.documentElement.style.setProperty('--colorCustom', null || '');
+
+    document.querySelector('#checkbox-title-color').checked = false;
+    document.querySelector('#checkbox-subtitle-color').checked = false;
+    document.querySelector('#checkbox-border-color').checked = false;
 }
 
-//
+//===========================================================================================
+function updateColorInput(){
+    let colorBackground = getComputedStyle(document.documentElement).getPropertyValue('--colorBackground').trim();
+    let colorBox = getComputedStyle(document.documentElement).getPropertyValue('--colorBox').trim();
+    let colorBox2 = getComputedStyle(document.documentElement).getPropertyValue('--colorBox2').trim();
+    let colorBox3 = getComputedStyle(document.documentElement).getPropertyValue('--colorBox3').trim();
+    let colorTitle = getComputedStyle(document.documentElement).getPropertyValue('--colorTitle').trim();
+    let colorSubtitle = getComputedStyle(document.documentElement).getPropertyValue('--colorSubtitle').trim();
+    let colorText = getComputedStyle(document.documentElement).getPropertyValue('--colorText').trim();
+    let colorBorder = getComputedStyle(document.documentElement).getPropertyValue('--colorBorder').trim();
+    let colorCustom = getComputedStyle(document.documentElement).getPropertyValue('--colorCustom').trim();
+    
+    document.querySelector('#input-background-color').value = colorBackground;
+    document.querySelector('#input-box-color').value = colorBox;
+    document.querySelector('#input-box2-color').value = colorBox2;
+    document.querySelector('#input-box3-color').value = colorBox3;
+    document.querySelector('#input-title-color').value = colorTitle;
+    document.querySelector('#input-subtitle-color').value = colorSubtitle;
+    document.querySelector('#input-text-color').value = colorText;
+    document.querySelector('#input-border-color').value = colorBorder;
+    document.querySelector('#input-custom-color').value = colorCustom;
+}
+
+//===========================================================================================
 function applyColorTheme(theme){
 
     let $html = document.querySelector('html');
-
-    removeTheme();
 
     if(theme=="light-theme"){
         $html.classList.remove('dark-theme');
         $html.classList.add('light-theme');     
     }
-
     if(theme=="dark-theme"){
         $html.classList.remove('light-theme');
         $html.classList.add('dark-theme');      
     }
+    resetTheme();
+    updateColorInput();
 }
 
-
-
-
-//
+//===========================================================================================
 function useCustomColor(elemento){
 
     switch(elemento){
-
         //title
         case "checkbox-title-color":
             let checkboxTitle = document.querySelector('#checkbox-title-color');
@@ -127,11 +150,10 @@ function useCustomColor(elemento){
                 alterarCor("input-border-color")
             }
             break;
-
     }    
 }
 
-//função copiar
+//===========================================================================================
 function copyColor(textColor){
     navigator.clipboard.writeText(textColor)
 }
