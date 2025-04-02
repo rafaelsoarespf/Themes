@@ -52,7 +52,13 @@ function changeColor(element){
             document.querySelector('#checkbox-border-color').checked = false;
             break;
 
-        //Cor de estilo
+        //Shadow
+        case "input-shadow-color":
+            let colorShadow = document.querySelector('#input-shadow-color').value;   
+            document.documentElement.style.setProperty('--colorShadow', colorShadow);
+            break;
+
+        //Custom color
         case "input-custom-color":
             let colorCustom = document.querySelector('#input-custom-color').value;   
             document.documentElement.style.setProperty('--colorCustom', colorCustom);
@@ -70,6 +76,7 @@ function resetTheme(){
     document.documentElement.style.setProperty('--colorSubtitle', null || '');
     document.documentElement.style.setProperty('--colorText', null || '');
     document.documentElement.style.setProperty('--colorBorder', null || '');
+    document.documentElement.style.setProperty('--colorShadow', null || '');
     document.documentElement.style.setProperty('--colorCustom', null || '');
 
     document.querySelector('#checkbox-title-color').checked = false;
@@ -87,6 +94,7 @@ function updateColorInput(){
     let colorSubtitle = getComputedStyle(document.documentElement).getPropertyValue('--colorSubtitle').trim();
     let colorText = getComputedStyle(document.documentElement).getPropertyValue('--colorText').trim();
     let colorBorder = getComputedStyle(document.documentElement).getPropertyValue('--colorBorder').trim();
+    let colorShadow = getComputedStyle(document.documentElement).getPropertyValue('--colorShadow').trim();
     let colorCustom = getComputedStyle(document.documentElement).getPropertyValue('--colorCustom').trim();
     
     document.querySelector('#input-background-color').value = colorBackground;
@@ -97,6 +105,7 @@ function updateColorInput(){
     document.querySelector('#input-subtitle-color').value = colorSubtitle;
     document.querySelector('#input-text-color').value = colorText;
     document.querySelector('#input-border-color').value = colorBorder;
+    document.querySelector('#input-shadow-color').value = colorShadow;
     document.querySelector('#input-custom-color').value = colorCustom;
 }
 

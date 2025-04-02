@@ -89,6 +89,12 @@
                 <input type="checkbox" id="checkbox-border-color" onchange="useCustomColor('checkbox-border-color')"><label for="checkbox-border-color">Aplicar cor de estilo</label>
             </div>
 
+            <!--shadow-color-->
+            <div class="color-setting-div-input">
+                <input type="color" id="input-shadow-color" onchange="changeColor('input-shadow-color')" name="input-shadow-color" value="none" />
+                <label for="input-custom-color">Cor da sombra</label>
+            </div>
+
             <!--custom-color-->
             <div class="color-setting-div-input">
                 <input type="color" id="input-custom-color" onchange="changeColor('input-custom-color')" name="input-custom-color" value="#474747" />
@@ -124,7 +130,9 @@
                     <!--text-color-->
                     <div class="color text-white" onclick="copyColor('#474747')" style="background-color: #474747"><span>#474747</span><p class="vertical-text text-white">Texto</p></div>
                     <!--border-color-->
-                    <div class="color text-black" onclick="copyColor('#ffffff33')" style="background-color: #ffffff33"><span>#ffffff33</span><p class="vertical-text text-black">Borda</p></div>
+                    <div class="color text-black" onclick="copyColor('#eeeeee')" style="background-color: #eeeeee"><span>#eeeeee</span><p class="vertical-text text-black">Borda</p></div>
+                    <!--Shadow-color-->
+                    <div class="color text-black" onclick="copyColor('')" style="background-color: none"><span>none</span><p class="vertical-text text-black">Sombra</p></div>
                     <!--custom-color-->
                     <div class="color text-white border-radios-left" onclick="copyColor('#474747')" style="background-color: #474747"><span>#474747</span><p class="vertical-text text-white">Cor de estilo</p></div>
                 </div>
@@ -151,6 +159,8 @@
                     <div class="color text-black" onclick="copyColor('#9b9b9b')" style="background-color: #9b9b9b"><span>#9b9b9b</span><p class="vertical-text text-black">Texto</p></div>
                     <!--border-color-->
                     <div class="color text-black" onclick="copyColor('#ffffff33')" style="background-color: #ffffff33"><span>#ffffff33</span><p class="vertical-text text-black">Borda</p></div>
+                    <!--Shadow-color-->
+                    <div class="color text-black" onclick="copyColor('')" style="background-color: none"><span>none</span><p class="vertical-text text-black">Sombra</p></div>
                     <!--custom-color-->
                     <div class="color text-black border-radios-left" onclick="copyColor('#d4d4d4')" style="background-color: #d4d4d4"><span>#d4d4d4</span><p class="vertical-text text-black">Cor de estilo</p></div>
                 </div>
