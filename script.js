@@ -113,15 +113,24 @@ function updateColorInput(){
 function applyColorTheme(theme){
 
     let $html = document.querySelector('html');
+    let body = document.querySelector('body');
 
+    //remove old theme
+    $html.classList.remove('light-theme', 'dark-theme', 'rainbow-theme');
+    body.classList.remove('rainbow-background');
+
+    //add new theme
     if(theme=="light-theme"){
-        $html.classList.remove('dark-theme');
         $html.classList.add('light-theme');     
     }
     if(theme=="dark-theme"){
-        $html.classList.remove('light-theme');
         $html.classList.add('dark-theme');      
     }
+    if(theme=="rainbow-theme"){
+        $html.classList.add('rainbow-theme');
+        body.classList.add('rainbow-background');      
+    }
+
     resetTheme();
     updateColorInput();
 }

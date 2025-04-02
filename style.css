@@ -21,46 +21,6 @@
   --fonte-android: 'idroid', cursive;
 }
 
-.light-theme:root{
-  --colorBackground: #ffffff;
-  --colorBox: #f9f9f9;
-  --colorBox2: #f0f0f0;
-  --colorBox3: #dddddd;
-
-  --colorTitle: #37352f;
-  --colorSubtitle: #37352f;
-  --colorText: #474747;
-  
-  --colorBorder: #eeeeee;
-  --colorShadow: none;
-
-  --colorCustom: #37352f; 
-
-  --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-  --fonte-destaque: 'Bebas Neue', cursive;
-  --fonte-android: 'idroid', cursive;
-}
-
-.dark-theme:root{
-  --colorBackground: #191919;
-  --colorBox: #202020;
-  --colorBox2: #2c2c2c;
-  --colorBox3: #383838;
-
-  --colorTitle: #d4d4d4;
-  --colorSubtitle: #d4d4d4;
-  --colorText: #9b9b9b;
-
-  --colorBorder: #ffffff33;
-  --colorShadow: none;
-  
-  --colorCustom: #d4d4d4;
-
-    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-    --fonte-destaque: 'Bebas Neue', cursive;
-    --fonte-android: 'idroid', cursive;
-}
-
 *{
     margin: 0px;
     padding:0px;
@@ -120,6 +80,7 @@ header .logo{
 .nav-item a.ativo{
   background: var(--colorCuston);
   color: rgb(255, 255, 255);
+  
 }
 
 /*main================================================================================*/
@@ -290,3 +251,98 @@ main section{
   background-color: var(--colorCustom);
   color: var(--colorBox);
 }
+
+
+/*--------------------------------------
+            Wallpaper
+  --------------------------------------*/
+
+  .rainbow-background {
+    width: 100vw;
+    background: linear-gradient(90deg, #8ea471, #77a8c2, #b667c2, #ba5f5f);
+    background-size: 600%;
+    animation: colors 30s ease infinite;
+  }
+
+  @keyframes colors {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .text {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+    }
+  }
+
+/*--------------------------------------
+              Temas
+  --------------------------------------*/
+
+  .light-theme:root{
+    --colorBackground: #ffffff;
+    --colorBox: #f9f9f9;
+    --colorBox2: #f0f0f0;
+    --colorBox3: #dddddd;
+  
+    --colorTitle: #37352f;
+    --colorSubtitle: #37352f;
+    --colorText: #474747;
+    
+    --colorBorder: #eeeeee;
+    --colorShadow: none;
+  
+    --colorCustom: #37352f; 
+  
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'idroid', cursive;
+  }
+  
+  .dark-theme:root{
+    --colorBackground: #191919;
+    --colorBox: #202020;
+    --colorBox2: #2c2c2c;
+    --colorBox3: #383838;
+  
+    --colorTitle: #d4d4d4;
+    --colorSubtitle: #d4d4d4;
+    --colorText: #9b9b9b;
+  
+    --colorBorder: #4d4d4d;
+    --colorShadow: none;
+    
+    --colorCustom: #d4d4d4;
+  
+      --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+      --fonte-destaque: 'Bebas Neue', cursive;
+      --fonte-android: 'idroid', cursive;
+  }
+  
+  .rainbow-theme:root{
+    --colorBackground: none; /*linear-gradient(90deg, #8ea471, #77a8c2, #b667c2, #ba5f5f);*/
+    --colorBox: #ffffffcc;
+    --colorBox2: #ffffff;
+    --colorBox3: #eeeeee;
+  
+    --colorTitle: #212529;
+    --colorSubtitle: #212529;
+    --colorText: #212529;
+  
+    --colorBorder: #dee2e6;
+    --colorShadow: none;
+    
+    --colorCustom: #0d6efd;
+  
+      --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+      --fonte-destaque: 'Bebas Neue', cursive;
+      --fonte-android: 'idroid', cursive;
+  }

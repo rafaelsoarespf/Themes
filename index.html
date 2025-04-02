@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <!--HEADER (NAVBAR)-------------------------------------------------------------------------------------------------->
     <header>
         <!--LOGO-->
         <a href="#" class="logo">Temas de cores</a>
@@ -32,8 +33,10 @@
         </nav>
     </header>
     
+    <!-- MAIN -------------------------------------------------------------------------------------------------->
     <main>
-        <!--section color-setting -->
+
+        <!--section color-setting ------------------------------------------------------------------------------>
         <section class="color-setting-box">
             <h1>Temas de cores</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eligendi. Ullam, accusantium praesentium quod ipsa possimus dolorem amet omnis error, unde, molestiae eius perferendis laboriosam corrupti neque maiores nisi. At.</p>
@@ -103,12 +106,12 @@
             
         </section>
 
-        <!--Cor de modelo-->
+        <!--Cor de modelo------------------------------------------------------------------------------------------------------------------------->
         <section id="">
             <div></div>
         </section>
 
-        <!--section color-palettes-->
+        <!--section color-palettes--------------------------------------------------------------------------------------------------------------->
         <section id="section-color-palettes">
 
             <!--Light Color-->
@@ -139,7 +142,7 @@
                 <button onclick="applyColorTheme('light-theme')">Aplicar</button>
             </div>
 
-            <!--Light Color-->
+            <!--Dark Color-->
             <div class="color-palettes-box mt-3">
                 <h2>Dark Color</h2>
                 <div class="div-colors">
@@ -158,17 +161,42 @@
                     <!--text-color-->
                     <div class="color text-black" onclick="copyColor('#9b9b9b')" style="background-color: #9b9b9b"><span>#9b9b9b</span><p class="vertical-text text-black">Texto</p></div>
                     <!--border-color-->
-                    <div class="color text-black" onclick="copyColor('#ffffff33')" style="background-color: #ffffff33"><span>#ffffff33</span><p class="vertical-text text-black">Borda</p></div>
+                    <div class="color text-white" onclick="copyColor('#4d4d4d')" style="background-color: #4d4d4d"><span>#4d4d4d</span><p class="vertical-text text-white">Borda</p></div>
                     <!--Shadow-color-->
                     <div class="color text-black" onclick="copyColor('')" style="background-color: none"><span>none</span><p class="vertical-text text-black">Sombra</p></div>
                     <!--custom-color-->
                     <div class="color text-black border-radios-left" onclick="copyColor('#d4d4d4')" style="background-color: #d4d4d4"><span>#d4d4d4</span><p class="vertical-text text-black">Cor de estilo</p></div>
                 </div>
                 <button onclick="applyColorTheme('dark-theme')">Aplicar</button>
-
-                </div>
             </div>
 
+            <!--Rainbow  Color-->
+            <div class="color-palettes-box mt-3">
+                <h2>Rainbow  Color</h2>
+                <div class="div-colors">
+                    <!--background-color-->
+                    <div class="color text-white border-radios-right rainbow-background" onclick="copyColor('#8ea471, #77a8c2, #b667c2, #ba5f5f')"><span>#8ea471<br> #77a8c2<br> #b667c2<br> #ba5f5f</span><p class="vertical-text text-black">Background</p></div>
+                    <!--box-color-->
+                    <div class="color text-black" onclick="copyColor('#ffffffcc')" style="background-color: #ffffffcc"><span>#ffffffcc</span><p class="vertical-text text-black">Box</p></div>
+                    <!--box2-color-->
+                    <div class="color text-black" onclick="copyColor('#ffffff')" style="background-color: #ffffff"><span>#ffffff</span><p class="vertical-text text-black">Box 2</p></div>
+                    <!--box3-color-->
+                    <div class="color text-black" onclick="copyColor('#eeeeee')" style="background-color: #eeeeee"><span>#eeeeee</span><p class="vertical-text text-black">Box 3</p></div>
+                    <!--title-color-->
+                    <div class="color text-white" onclick="copyColor('#212529')" style="background-color: #212529"><span>#212529</span><p class="vertical-text text-white">Título</p></div>
+                    <!--subtitle-color-->
+                    <div class="color text-white" onclick="copyColor('#212529')" style="background-color: #212529"><span>#212529</span><p class="vertical-text text-white">Subtítulo</p></div>
+                    <!--text-color-->
+                    <div class="color text-white" onclick="copyColor('#212529')" style="background-color: #212529"><span>#212529</span><p class="vertical-text text-white">Texto</p></div>
+                    <!--border-color-->
+                    <div class="color text-black" onclick="copyColor('#dee2e6')" style="background-color: #dee2e6"><span>#dee2e6</span><p class="vertical-text text-black">Borda</p></div>
+                    <!--Shadow-color-->
+                    <div class="color text-black" onclick="copyColor('')" style="background-color: none"><span>none</span><p class="vertical-text text-black">Sombra</p></div>
+                    <!--custom-color-->
+                    <div class="color text-white border-radios-left" onclick="copyColor('#0d6efd')" style="background-color: #0d6efd"><span>#0d6efd</span><p class="vertical-text text-white">Cor de estilo</p></div>
+                </div>
+                <button onclick="applyColorTheme('rainbow-theme')">Aplicar</button>
+            </div>
 
         </section>
     </main>
