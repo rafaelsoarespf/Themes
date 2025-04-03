@@ -75,7 +75,6 @@ function changeColor(element){
             break;
     }
 }
-
 //==========================================================================================
 function changeFont(element){
     switch(element){
@@ -86,7 +85,7 @@ function changeFont(element){
             sizeTitle = document.querySelector('#input-size-title').value;
             weightTitle = document.querySelector('#input-weight-title').value;
             styleTitle = document.querySelector('#input-style-title').value;
-            document.documentElement.style.setProperty('--titleFont', `${styleTitle} ${weightTitle} ${sizeTitle}px ${fontTitle}`);
+            document.documentElement.style.setProperty('--fontTitle', `${styleTitle} ${weightTitle} ${sizeTitle}px ${fontTitle}`);
             break;
 
         //subtitle
@@ -95,10 +94,17 @@ function changeFont(element){
             sizeSubtitle = document.querySelector('#input-size-subtitle').value;
             weightSubtitle = document.querySelector('#input-weight-subtitle').value;
             styleSubtitle = document.querySelector('#input-style-subtitle').value;
-            document.documentElement.style.setProperty('--subtitleFont', `${styleSubtitle} ${weightSubtitle} ${sizeSubtitle}px ${fontSubtitle}`);
+            document.documentElement.style.setProperty('--fontSubtitle', `${styleSubtitle} ${weightSubtitle} ${sizeSubtitle}px ${fontSubtitle}`);
+
+        //text
+        case "text":
+            fontText = document.querySelector('#input-font-text').value;
+            sizeText = document.querySelector('#input-size-text').value;
+            weightText = document.querySelector('#input-weight-text').value;
+            styleText = document.querySelector('#input-style-text').value;
+            document.documentElement.style.setProperty('--fontText', `${styleText} ${weightText} ${sizeText}px ${fontText}`);
     }
 }
-
 //===========================================================================================
 function resetTheme(){
     document.documentElement.style.setProperty('--colorBackground', null || ''); 
@@ -116,7 +122,6 @@ function resetTheme(){
     document.querySelector('#checkbox-subtitle-color').checked = false;
     document.querySelector('#checkbox-border-color').checked = false;
 }
-
 //===========================================================================================
 function updateColorInput(){
     let colorBackground = getComputedStyle(document.documentElement).getPropertyValue('--colorBackground').trim();
@@ -154,7 +159,6 @@ function updateColorInput(){
     document.querySelector('#input-shadow-color-value').innerHTML = colorShadow;
     document.querySelector('#input-custom-color-value').innerHTML = colorCustom;
 }
-
 //===========================================================================================
 function applyColorTheme(theme){
 
@@ -205,7 +209,7 @@ function useCustomColor(elemento){
             }
             break;    
 
-        //title
+        //border
         case "checkbox-border-color": 
             let checkboxBorder = document.querySelector('#checkbox-border-color');
             if(checkboxBorder.checked){  

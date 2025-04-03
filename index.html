@@ -110,22 +110,21 @@
 
             <!--Fonts--------------------------------------------------->
             <div class="color-setting-box2">
-                <h2>Fontes</h2>
+
                 
                 <!--Títle-------------------->
                 <div>
-                    <h3>Título</h3>
-
+                    <h2>Título</h2>
                     <!--Title Font-->
                     <div class="fonts-setting-div-input">
                         <label for="input-font-title"> Fonte: </label>
-                        <select id="input-font-title" onchange="changeFont('title')">                    
+                        <select id="input-font-title" name="input-font-title" onchange="changeFont('title')">                    
                             <option value="Arial, Helvetica, sans-serif" style="font-family: Arial !important;" selected>Arial</option>
-                            <option value="'Courier New', Courier, monospace" style="font-family: 'Courier New' !important;" selected>Courier New</option>
-                            <option value="cursive" style="font-family: cursive !important;" selected>Cursive</option>
-                            <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" style="font-family:'Franklin Gothic Medium'  !important;" selected>Franklin Gothic Medium</option>
-                            <option value="fantasy" style="font-family: fantasy !important;" selected>Fantasy</option>
-                            <option value="Georgia, 'Times New Roman', Times, serif" style="font-family: Georgia !important;" selected>Georgia</option>
+                            <option value="'Courier New', Courier, monospace" style="font-family: 'Courier New' !important;">Courier New</option>
+                            <option value="cursive" style="font-family: cursive !important;">Cursive</option>
+                            <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" style="font-family:'Franklin Gothic Medium'  !important;">Franklin Gothic Medium</option>
+                            <option value="fantasy" style="font-family: fantasy !important;">Fantasy</option>
+                            <option value="Georgia, 'Times New Roman', Times, serif" style="font-family: Georgia !important;" >Georgia</option>
                             <option value="Helvetica" style="font-family: Helvetica !important;">Helvetica</option>
                             <option value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" style="font-family: Impact !important;">Impact</option>
                             <option value="monospace" style="font-family: monospace !important;">Monospace</option>
@@ -138,22 +137,22 @@
                     <!--Title Size-->
                     <div class="fonts-setting-div-input">
                         <label for="input-size-title">Tamanho(px): </label>
-                        <input type="number" min="4" max="128" name="input-size-title" id="input-size-title" value="20" onchange="changeFont('title')">
+                        <input type="number" id="input-size-title" name="input-size-title" min="4" max="128"  value="40" onchange="changeFont('title')">
                     </div>
                     <!--Title Weight-->
                     <div class="fonts-setting-div-input">
                         <label for="input-weight-title"> Peso: </label>
-                        <select id="input-weight-title" onchange="changeFont('title')">                    
-                                <option value="lighter" selected>fino</option>
-                                <option value="normal" selected>normal</option>
-                                <option value="bold">negrito</option>
+                        <select id="input-weight-title" name="input-weight-title" onchange="changeFont('title')">                    
+                                <option value="lighter" >fino</option>
+                                <option value="normal">normal</option>
+                                <option value="bold" selected>negrito</option>
                                 <option value="bolder">negrito+</option>
                         </select>
                     </div>
                     <!--Títle Style-->
                     <div class="fonts-setting-div-input">
                         <label for="input-style-title">Estilo: </label>
-                        <select id="input-style-title" onchange="changeFont('title')">                    
+                        <select id="input-style-title" name="input-style-title" onchange="changeFont('title')">                    
                             <option value="normal" selected>Normal</option>
                             <option value="italic">Itálico</option>
                         </select>
@@ -162,17 +161,17 @@
 
                 <!--Subtítle-------------------->
                 <div>
-                    <h3>Subtítulo</h3>
+                    <h2>Subtítulo</h2>
                     <!--Subtítle Font-->
                     <div class="fonts-setting-div-input">
                         <label for="input-font-subtitle"> Fonte: </label>
-                        <select id="input-font-subtitle" onchange="changeFont('subtitle')">                    
+                        <select id="input-font-subtitle" name="input-font-subtitle" onchange="changeFont('subtitle')">                    
                             <option value="Arial, Helvetica, sans-serif" style="font-family: Arial !important;" selected>Arial</option>
-                            <option value="'Courier New', Courier, monospace" style="font-family: 'Courier New' !important;" selected>Courier New</option>
-                            <option value="cursive" style="font-family: cursive !important;" selected>Cursive</option>
-                            <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" style="font-family:'Franklin Gothic Medium'  !important;" selected>Franklin Gothic Medium</option>
-                            <option value="fantasy" style="font-family: fantasy !important;" selected>Fantasy</option>
-                            <option value="Georgia, 'Times New Roman', Times, serif" style="font-family: Georgia !important;" selected>Georgia</option>
+                            <option value="'Courier New', Courier, monospace" style="font-family: 'Courier New' !important;">Courier New</option>
+                            <option value="cursive" style="font-family: cursive !important;">Cursive</option>
+                            <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" style="font-family:'Franklin Gothic Medium'  !important;">Franklin Gothic Medium</option>
+                            <option value="fantasy" style="font-family: fantasy !important;">Fantasy</option>
+                            <option value="Georgia, 'Times New Roman', Times, serif" style="font-family: Georgia !important;">Georgia</option>
                             <option value="Helvetica" style="font-family: Helvetica !important;">Helvetica</option>
                             <option value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" style="font-family: Impact !important;">Impact</option>
                             <option value="monospace" style="font-family: monospace !important;">Monospace</option>
@@ -184,13 +183,13 @@
                     <!--Subtítle Size-->
                     <div class="fonts-setting-div-input">
                         <label for="input-size-subtitle">Tamanho(px): </label>
-                        <input type="number" min="4" max="128" name="input-size-subtitle" id="input-size-subtitle" value="20" onchange="changeFont('subtitle')">
+                        <input type="number" id="input-size-subtitle" name="input-size-subtitle" min="4" max="128" value="32" onchange="changeFont('subtitle')">
                     </div>
                     <!--Subtítle Weight-->
                     <div class="fonts-setting-div-input">
                         <label for="input-weight-subtitle"> Peso: </label>
-                        <select id="input-weight-subtitle" onchange="changeFont('subtitle')">                    
-                                <option value="lighter" selected>fino</option>
+                        <select id="input-weight-subtitle" name="input-weight-subtitle" onchange="changeFont('subtitle')">                    
+                                <option value="lighter">fino</option>
                                 <option value="normal" selected>normal</option>
                                 <option value="bold">negrito</option>
                                 <option value="bolder">negrito+</option>
@@ -199,13 +198,58 @@
                     <!--Subtítle Style-->
                     <div class="fonts-setting-div-input">
                         <label for="input-style-subtitle">Estilo: </label>
-                        <select id="input-style-subtitle" onchange="changeFont('subtitle')">                    
+                        <select id="input-style-subtitle" name="input-style-subtitle" onchange="changeFont('subtitle')">                    
                             <option value="normal" selected>Normal</option>
                             <option value="italic">Itálico</option>
                         </select>
                     </div>
                 </div>
 
+                <!--Text-------------------->
+                <div>
+                    <h2>Text</h2>
+                    <!--text Font-->
+                    <div class="fonts-setting-div-input">
+                        <label for="input-font-text"> Fonte: </label>
+                        <select id="input-font-text" name="input-font-text" onchange="changeFont('text')">                    
+                            <option value="Arial, Helvetica, sans-serif" style="font-family: Arial !important;" selected>Arial</option>
+                            <option value="'Courier New', Courier, monospace" style="font-family: 'Courier New' !important;">Courier New</option>
+                            <option value="cursive" style="font-family: cursive !important;">Cursive</option>
+                            <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" style="font-family:'Franklin Gothic Medium'  !important;">Franklin Gothic Medium</option>
+                            <option value="fantasy" style="font-family: fantasy !important;">Fantasy</option>
+                            <option value="Georgia, 'Times New Roman', Times, serif" style="font-family: Georgia !important;">Georgia</option>
+                            <option value="Helvetica" style="font-family: Helvetica !important;">Helvetica</option>
+                            <option value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" style="font-family: Impact !important;">Impact</option>
+                            <option value="monospace" style="font-family: monospace !important;">Monospace</option>
+                            <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" style="font-family: 'Segoe UI' !important;">Segoe UI</option>
+                            <option value="Verdana, Geneva, Tahoma, sans-serif" style="font-family: Verdana !important;">Verdana</option>
+                            <option value="'Times New Roman', Times, serif" style="font-family: 'Times New Roman' !important;">Times New Roman</option>
+                        </select>
+                    </div>
+                    <!--Text Stextize-->
+                    <div class="fonts-setting-div-input">
+                        <label for="input-size-text">Tamanho(px): </label>
+                        <input id="input-size-text" name="input-size-text" type="number" min="4" max="128" value="20" onchange="changeFont('text')">
+                    </div>
+                    <!--Text Weight-->
+                    <div class="fonts-setting-div-input">
+                        <label for="input-weight-text"> Peso: </label>
+                        <select id="input-weight-text" name="input-weight-text" onchange="changeFont('text')">                    
+                                <option value="lighter">fino</option>
+                                <option value="normal" selected>normal</option>
+                                <option value="bold">negrito</option>
+                                <option value="bolder">negrito+</option>
+                        </select>
+                    </div>
+                    <!--Text Style-->
+                    <div class="fonts-setting-div-input">
+                        <label for="input-style-text">Estilo: </label>
+                        <select id="input-style-text" name="input-style-text" onchange="changeFont('text')">                    
+                            <option value="normal" selected>Normal</option>
+                            <option value="italic">Itálico</option>
+                        </select>
+                    </div>
+                </div>
 
             </div>
             </div>

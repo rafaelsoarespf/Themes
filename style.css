@@ -17,14 +17,10 @@
 
   --colorCustom: #37352f; 
 
-  --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-  --fonte-destaque: 'Bebas Neue', cursive;
-  --fonte-android: 'idroid', cursive;
-
   /*Font*/
-  --titleFont: normal bold 3em Arial, Verdana, Helvetica, sans-serif;
-  --subtitleFont: normal normal 2em Arial, Verdana, Helvetica, sans-serif;
-  --textFont: 
+  --fontTitle: normal bold 2.8em Arial, Verdana, Helvetica, sans-serif;
+  --fontSubtitle: normal normal 2em Arial, Verdana, Helvetica, sans-serif;
+  --fontText: normal normal 1em Arial, Verdana, Helvetica, sans-serif;
 }
 
 *{
@@ -95,12 +91,12 @@ main{
 }
 
 main h1{
-  font: var(--titleFont);
+  font: var(--fontTitle);
   color: var(--colorTitle);
 }
 
 main h2, main h3{
-  font: var(--subtitleFont);
+  font: var(--fontSubtitle);
   color: var(--colorSubtitle);
 }
 
@@ -116,10 +112,14 @@ main section{
 /*section(1) color-setting =======================================================================*/
 .color-setting-box{
   background-color: var(--colorBox);
-  box-shadow: 0px 1px 12px var(--colorShadow);
   padding: 20px;
-  border-radius: 10px;
   border: 1px solid var(--colorBorder);
+  border-radius: 10px;
+  box-shadow: 0px 1px 12px var(--colorShadow);
+}
+
+.color-setting-box p{
+  font: var(--fontText);
 }
 
 .color-setting-box h2{
@@ -151,14 +151,14 @@ main section{
   -moz-appearance: none; /* Remove o estilo no Firefox */
   appearance: none; /* Remove o estilo nativo em outros navegadores */
   
+  margin-right: 5px;
   background-color: none;
   width: 96px;
   height: 40px;
   border: none;
   border-radius: 5px;
-  outline: none; /* Remove o contorno de foco */
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Remove a sombra */
-  margin-right: 5px;
+  outline: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
@@ -175,6 +175,7 @@ main section{
 .color-setting-div-input label{
   color: var(--colorText);
   cursor: pointer;
+  font: var(--fontText);
 }
 
 .color-setting-div-input > input[type="checkbox"]{
@@ -189,7 +190,6 @@ main section{
   margin: 5px 0px;
 }
 
-
 .fonts-setting-div-input input,
 .fonts-setting-div-input select{
   width: 150px;
@@ -199,7 +199,10 @@ main section{
   border-radius: 5px;
   background-color: var(--colorBox2);
   color: var(--colorText);
-  
+}
+
+.fonts-setting-div-input label{
+  font: var(--fontText);
 }
 
 /*section(2) color-palettes =======================================================================*/
@@ -385,10 +388,6 @@ main section{
     --colorShadow: none;
     
     --colorCustom: #d4d4d4;
-  
-      --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-      --fonte-destaque: 'Bebas Neue', cursive;
-      --fonte-android: 'idroid', cursive;
   }
   
   .rainbow-theme:root{
@@ -405,8 +404,4 @@ main section{
     --colorShadow: none;
     
     --colorCustom: #0d6efd;
-  
-      --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-      --fonte-destaque: 'Bebas Neue', cursive;
-      --fonte-android: 'idroid', cursive;
   }
