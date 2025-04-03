@@ -76,6 +76,21 @@ function changeColor(element){
     }
 }
 
+//==========================================================================================
+function changeFont(element){
+    switch(element){
+
+        //title
+        case "title":
+            fontTitle = document.querySelector('#input-font-title').value;
+            sizeTitle = document.querySelector('#input-size-title').value;
+            weightTitle = document.querySelector('#input-weight-title').value;
+            styleTitle = document.querySelector('#input-style-title').value;
+            document.documentElement.style.setProperty('--titleFont', `${styleTitle} ${weightTitle} ${sizeTitle}px ${fontTitle}`);
+            break;
+    }
+}
+
 //===========================================================================================
 function resetTheme(){
     document.documentElement.style.setProperty('--colorBackground', null || ''); 
