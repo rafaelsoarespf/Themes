@@ -112,25 +112,35 @@
             <div class="color-setting-box2">
                 <h2>Fontes</h2>
                 
-                <!--Título-------------------->
+                <!--Títle-------------------->
                 <div>
                     <h3>Título</h3>
-                    <!--Título Font-->
+
+                    <!--Title Font-->
                     <div class="fonts-setting-div-input">
                         <label for="input-font-title"> Fonte: </label>
                         <select id="input-font-title" onchange="changeFont('title')">                    
-                            <option value="Arial" style="font-family: Arial !important;" selected>Arial</option>
+                            <option value="Arial, Helvetica, sans-serif" style="font-family: Arial !important;" selected>Arial</option>
+                            <option value="'Courier New', Courier, monospace" style="font-family: 'Courier New' !important;" selected>Courier New</option>
+                            <option value="cursive" style="font-family: cursive !important;" selected>Cursive</option>
+                            <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" style="font-family:'Franklin Gothic Medium'  !important;" selected>Franklin Gothic Medium</option>
+                            <option value="fantasy" style="font-family: fantasy !important;" selected>Fantasy</option>
+                            <option value="Georgia, 'Times New Roman', Times, serif" style="font-family: Georgia !important;" selected>Georgia</option>
                             <option value="Helvetica" style="font-family: Helvetica !important;">Helvetica</option>
-                            <option value="Verdana" style="font-family: Verdana !important;">Verdana</option>
-                            <option value="valor2">valor2</option>
+                            <option value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" style="font-family: Impact !important;">Impact</option>
+                            <option value="monospace" style="font-family: monospace !important;">Monospace</option>
+                            <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" style="font-family: 'Segoe UI' !important;">Segoe UI</option>
+                            <option value="Verdana, Geneva, Tahoma, sans-serif" style="font-family: Verdana !important;">Verdana</option>
+                            <option value="'Times New Roman', Times, serif" style="font-family: 'Times New Roman' !important;">Times New Roman</option>
                         </select>
                     </div>
-                    <!--Título Tamanho-->
+                    
+                    <!--Title Size-->
                     <div class="fonts-setting-div-input">
                         <label for="input-size-title">Tamanho(px): </label>
-                        <input type="number" min="4" max="128" name="input-size-title" id="input-size-title" onchange="changeFont('title')">
+                        <input type="number" min="4" max="128" name="input-size-title" id="input-size-title" value="20" onchange="changeFont('title')">
                     </div>
-                    <!--Título Peso-->
+                    <!--Title Weight-->
                     <div class="fonts-setting-div-input">
                         <label for="input-weight-title"> Peso: </label>
                         <select id="input-weight-title" onchange="changeFont('title')">                    
@@ -140,7 +150,7 @@
                                 <option value="bolder">negrito+</option>
                         </select>
                     </div>
-                    <!--Título Estilo-->
+                    <!--Títle Style-->
                     <div class="fonts-setting-div-input">
                         <label for="input-style-title">Estilo: </label>
                         <select id="input-style-title" onchange="changeFont('title')">                    
@@ -148,7 +158,52 @@
                             <option value="italic">Itálico</option>
                         </select>
                     </div>
-                    
+                </div>
+
+                <!--Subtítle-------------------->
+                <div>
+                    <h3>Subtítulo</h3>
+                    <!--Subtítle Font-->
+                    <div class="fonts-setting-div-input">
+                        <label for="input-font-subtitle"> Fonte: </label>
+                        <select id="input-font-subtitle" onchange="changeFont('subtitle')">                    
+                            <option value="Arial, Helvetica, sans-serif" style="font-family: Arial !important;" selected>Arial</option>
+                            <option value="'Courier New', Courier, monospace" style="font-family: 'Courier New' !important;" selected>Courier New</option>
+                            <option value="cursive" style="font-family: cursive !important;" selected>Cursive</option>
+                            <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" style="font-family:'Franklin Gothic Medium'  !important;" selected>Franklin Gothic Medium</option>
+                            <option value="fantasy" style="font-family: fantasy !important;" selected>Fantasy</option>
+                            <option value="Georgia, 'Times New Roman', Times, serif" style="font-family: Georgia !important;" selected>Georgia</option>
+                            <option value="Helvetica" style="font-family: Helvetica !important;">Helvetica</option>
+                            <option value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" style="font-family: Impact !important;">Impact</option>
+                            <option value="monospace" style="font-family: monospace !important;">Monospace</option>
+                            <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" style="font-family: 'Segoe UI' !important;">Segoe UI</option>
+                            <option value="Verdana, Geneva, Tahoma, sans-serif" style="font-family: Verdana !important;">Verdana</option>
+                            <option value="'Times New Roman', Times, serif" style="font-family: 'Times New Roman' !important;">Times New Roman</option>
+                        </select>
+                    </div>
+                    <!--Subtítle Size-->
+                    <div class="fonts-setting-div-input">
+                        <label for="input-size-subtitle">Tamanho(px): </label>
+                        <input type="number" min="4" max="128" name="input-size-subtitle" id="input-size-subtitle" value="20" onchange="changeFont('subtitle')">
+                    </div>
+                    <!--Subtítle Weight-->
+                    <div class="fonts-setting-div-input">
+                        <label for="input-weight-subtitle"> Peso: </label>
+                        <select id="input-weight-subtitle" onchange="changeFont('subtitle')">                    
+                                <option value="lighter" selected>fino</option>
+                                <option value="normal" selected>normal</option>
+                                <option value="bold">negrito</option>
+                                <option value="bolder">negrito+</option>
+                        </select>
+                    </div>
+                    <!--Subtítle Style-->
+                    <div class="fonts-setting-div-input">
+                        <label for="input-style-subtitle">Estilo: </label>
+                        <select id="input-style-subtitle" onchange="changeFont('subtitle')">                    
+                            <option value="normal" selected>Normal</option>
+                            <option value="italic">Itálico</option>
+                        </select>
+                    </div>
                 </div>
 
 

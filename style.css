@@ -21,8 +21,10 @@
   --fonte-destaque: 'Bebas Neue', cursive;
   --fonte-android: 'idroid', cursive;
 
-  /*Title*/
-  --titleFont: normal bold 30px Arial, Verdana, Helvetica, sans-serif;
+  /*Font*/
+  --titleFont: normal bold 3em Arial, Verdana, Helvetica, sans-serif;
+  --subtitleFont: normal normal 2em Arial, Verdana, Helvetica, sans-serif;
+  --textFont: 
 }
 
 *{
@@ -98,14 +100,11 @@ main h1{
 }
 
 main h2, main h3{
+  font: var(--subtitleFont);
   color: var(--colorSubtitle);
 }
 
-main label{
-  color: var(--colorText);
-}
-
-main p{
+main label, p{
   color: var(--colorText);
 }
 

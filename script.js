@@ -88,6 +88,14 @@ function changeFont(element){
             styleTitle = document.querySelector('#input-style-title').value;
             document.documentElement.style.setProperty('--titleFont', `${styleTitle} ${weightTitle} ${sizeTitle}px ${fontTitle}`);
             break;
+
+        //subtitle
+        case "subtitle":
+            fontSubtitle = document.querySelector('#input-font-subtitle').value;
+            sizeSubtitle = document.querySelector('#input-size-subtitle').value;
+            weightSubtitle = document.querySelector('#input-weight-subtitle').value;
+            styleSubtitle = document.querySelector('#input-style-subtitle').value;
+            document.documentElement.style.setProperty('--subtitleFont', `${styleSubtitle} ${weightSubtitle} ${sizeSubtitle}px ${fontSubtitle}`);
     }
 }
 
