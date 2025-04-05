@@ -119,7 +119,7 @@
                     <!--Title Font-->
                     <div class="fonts-setting-div-input">
                         <label for="input-font-title"> Fonte: </label>
-                        <select id="input-font-title" name="input-font-title" onchange="changeFont('title')">                    
+                        <select class="input" id="input-font-title" name="input-font-title" onchange="changeFont('title')">                    
                             <option value="Arial, Helvetica, sans-serif" style="font-family: Arial !important;" selected>Arial</option>
                             <option value="'Courier New', Courier, monospace" style="font-family: 'Courier New' !important;">Courier New</option>
                             <option value="cursive" style="font-family: cursive !important;">Cursive</option>
@@ -137,13 +137,13 @@
                     
                     <!--Title Size-->
                     <div class="fonts-setting-div-input">
-                        <label for="input-size-title">Tamanho(rem): </label>
-                        <input type="number" id="input-size-title" name="input-size-title" min="0.5" max="5" step="0.1" value="2.8" onchange="changeFont('title')">
+                        <label for="input-size-title">Tamanho(rem): <span id="input-size-title-span">2.8</span></label>
+                        <input type="range" class="form-range" id="input-size-title" name="input-size-title" min="0.5" max="5" step="0.1" value="2.8" onchange="changeFont('title')">
                     </div>
                     <!--Title Weight-->
                     <div class="fonts-setting-div-input">
                         <label for="input-weight-title"> Peso: </label>
-                        <select id="input-weight-title" name="input-weight-title" onchange="changeFont('title')">                    
+                        <select class="input" id="input-weight-title" name="input-weight-title" onchange="changeFont('title')">                    
                                 <option value="lighter" >Fino</option>
                                 <option value="normal">Normal</option>
                                 <option value="bold" selected>Negrito</option>
@@ -153,7 +153,7 @@
                     <!--Títle Style-->
                     <div class="fonts-setting-div-input">
                         <label for="input-style-title">Estilo: </label>
-                        <select id="input-style-title" name="input-style-title" onchange="changeFont('title')">                    
+                        <select class="input" id="input-style-title" name="input-style-title" onchange="changeFont('title')">                    
                             <option value="normal" selected>Normal</option>
                             <option value="italic">Itálico</option>
                         </select>
@@ -166,7 +166,7 @@
                     <!--Subtítle Font-->
                     <div class="fonts-setting-div-input">
                         <label for="input-font-subtitle"> Fonte: </label>
-                        <select id="input-font-subtitle" name="input-font-subtitle" onchange="changeFont('subtitle')">                    
+                        <select class="input" id="input-font-subtitle" name="input-font-subtitle" onchange="changeFont('subtitle')">                    
                             <option value="Arial, Helvetica, sans-serif" style="font-family: Arial !important;" selected>Arial</option>
                             <option value="'Courier New', Courier, monospace" style="font-family: 'Courier New' !important;">Courier New</option>
                             <option value="cursive" style="font-family: cursive !important;">Cursive</option>
@@ -183,13 +183,13 @@
                     </div>
                     <!--Subtítle Size-->
                     <div class="fonts-setting-div-input">
-                        <label for="input-size-subtitle">Tamanho(rem): </label>
-                        <input type="number" id="input-size-subtitle" name="input-size-subtitle" min="0.5" max="5" step="0.1" value="2" onchange="changeFont('subtitle')">
+                        <label for="input-size-subtitle">Tamanho(rem): <span id="input-size-subtitle-span">2</span></label>
+                        <input type="range" class="form-range" id="input-size-subtitle" name="input-size-subtitle" min="0.5" max="5" step="0.1" value="2" onchange="changeFont('subtitle')">
                     </div>
                     <!--Subtítle Weight-->
                     <div class="fonts-setting-div-input">
                         <label for="input-weight-subtitle"> Peso: </label>
-                        <select id="input-weight-subtitle" name="input-weight-subtitle" onchange="changeFont('subtitle')">                    
+                        <select id="input-weight-subtitle" class="input" name="input-weight-subtitle" onchange="changeFont('subtitle')">                    
                                 <option value="lighter">Fino</option>
                                 <option value="normal" selected>Normal</option>
                                 <option value="bold">Negrito</option>
@@ -199,7 +199,7 @@
                     <!--Subtítle Style-->
                     <div class="fonts-setting-div-input">
                         <label for="input-style-subtitle">Estilo: </label>
-                        <select id="input-style-subtitle" name="input-style-subtitle" onchange="changeFont('subtitle')">                    
+                        <select id="input-style-subtitle" class="input" name="input-style-subtitle" onchange="changeFont('subtitle')">                    
                             <option value="normal" selected>Normal</option>
                             <option value="italic">Itálico</option>
                         </select>
@@ -207,12 +207,12 @@
                 </div>
 
                 <!--Text-------------------->
-                <div class="box2 mt-2">
+                <div class="box2 mt-2 ">
                     <h2 class="subtitle">Texto</h2>
                     <!--text Font-->
                     <div class="fonts-setting-div-input">
                         <label for="input-font-text"> Fonte: </label>
-                        <select id="input-font-text" name="input-font-text" onchange="changeFont('text')">                    
+                        <select id="input-font-text" class="input" name="input-font-text" onchange="changeFont('text')">                    
                             <option value="Arial, Helvetica, sans-serif" style="font-family: Arial !important;" selected>Arial</option>
                             <option value="'Courier New', Courier, monospace" style="font-family: 'Courier New' !important;">Courier New</option>
                             <option value="cursive" style="font-family: cursive !important;">Cursive</option>
@@ -229,13 +229,13 @@
                     </div>
                     <!--Text Stextize-->
                     <div class="fonts-setting-div-input">
-                        <label for="input-size-text">Tamanho(rem): </label>
-                        <input id="input-size-text" name="input-size-text" type="number" min="0.5" max="5" step="0.1" value="1" onchange="changeFont('text')">
+                        <label for="input-size-text">Tamanho(rem): <span id="input-size-text-span">1</span></label>
+                        <input type="range" class="form-range" id="input-size-text" name="input-size-text" min="0.5" max="3" step="0.1" value="1" onchange="changeFont('text')">
                     </div>
                     <!--Text Weight-->
                     <div class="fonts-setting-div-input">
                         <label for="input-weight-text"> Peso: </label>
-                        <select id="input-weight-text" name="input-weight-text" onchange="changeFont('text')">                    
+                        <select id="input-weight-text" class="input" name="input-weight-text" onchange="changeFont('text')">                    
                                 <option value="lighter">Fino</option>
                                 <option value="normal" selected>Normal</option>
                                 <option value="bold">Negrito</option>
@@ -245,7 +245,7 @@
                     <!--Text Style-->
                     <div class="fonts-setting-div-input">
                         <label for="input-style-text">Estilo: </label>
-                        <select id="input-style-text" name="input-style-text" onchange="changeFont('text')">                    
+                        <select id="input-style-text" class="input" name="input-style-text" onchange="changeFont('text')">                    
                             <option value="normal" selected>Normal</option>
                             <option value="italic">Itálico</option>
                         </select>
@@ -285,7 +285,7 @@
                     <!--custom-color-->
                     <div class="color text-white border-radios-left" onclick="copyColor('#474747')" style="background-color: #474747"><span>#474747</span><p class="vertical-text text-white">Cor de estilo</p></div>
                 </div>
-                <p class="text">Fonte:</p>
+                <p class="text mt-2">Fonte:</p>
                 <div class="theme-selector-div-fonts">
                     <!--title-color-->
                     <div class="font text-white border-radios-right" style="background-color: #37352f"><span>Arial 2.8rem negrito</span><p class="horizontal-text text-white">Título</p></div>
@@ -323,7 +323,7 @@
                     <!--custom-color-->
                     <div class="color text-black border-radios-left" onclick="copyColor('#d4d4d4')" style="background-color: #d4d4d4"><span>#d4d4d4</span><p class="vertical-text text-black">Cor de estilo</p></div>
                 </div>
-                <p>Fonte:</p>
+                <p class="text mt-2">Fonte:</p>
                 <div class="theme-selector-div-fonts">
                     <!--title-color-->
                     <div class="font text-black border-radios-right" style="background-color: #d4d4d4"><span>Arial 2.8rem negrito</span><p class="horizontal-text text-black">Título</p></div>
@@ -335,9 +335,9 @@
                 <button class="button" onclick="applyColorTheme('dark-theme')">Aplicar</button>
             </div>
 
-            <!--Rainbow Light Theme-->
+            <!--Light Rainbow Theme-->
             <div class="box theme-selector-div-box mt-3">
-                <h2 class="subtitle">Tema Rainbow Light</h2>
+                <h2 class="subtitle">Tema Light Rainbow </h2>
                 <p class="text">Cores:</p>
                 <div class="theme-selector-div-colors">
                     <!--background-color-->
@@ -361,7 +361,7 @@
                     <!--custom-color-->
                     <div class="color text-white border-radios-left" onclick="copyColor('#0d6efd')" style="background-color: #0d6efd"><span>#0d6efd</span><p class="vertical-text text-white">Cor de estilo</p></div>
                 </div>
-                <p class="text">Fonte:</p>
+                <p class="text mt-2">Fonte:</p>
                 <div class="theme-selector-div-fonts">
                     <!--title-color-->
                     <div class="font text-white border-radios-right" style="background-color: #212529"><span>Arial 2.8rem negrito</span><p class="horizontal-text text-white">Título</p></div>

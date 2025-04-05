@@ -176,6 +176,11 @@ function updateColorInput(){
     document.querySelector('#input-size-text').value = 1;
     document.querySelector('#input-weight-text').value = 'normal';
 
+
+    //radio span
+    inputSizeTitleSpan.textContent = inputSizeTitle.value;
+    inputSizeSubtitleSpan.textContent = inputSizeSubtitle.value;
+    inputSizeTextSpan.textContent = inputSizeText.value;
 }
 //===========================================================================================
 function applyColorTheme(theme){
@@ -243,3 +248,24 @@ function useCustomColor(elemento){
 function copyColor(textColor){
     navigator.clipboard.writeText(textColor)
 }
+
+//section 1 ======================================================================
+const inputSizeTitle = document.getElementById('input-size-title');
+const inputSizeSubtitle = document.getElementById('input-size-subtitle');
+const inputSizeText = document.getElementById('input-size-text');
+
+const inputSizeTitleSpan = document.getElementById('input-size-title-span');
+const inputSizeSubtitleSpan = document.getElementById('input-size-subtitle-span');
+const inputSizeTextSpan = document.getElementById('input-size-text-span');
+
+inputSizeTitle.addEventListener('input', function() {
+    inputSizeTitleSpan.textContent = inputSizeTitle.value;
+});
+
+inputSizeSubtitle.addEventListener('input', function() {
+    inputSizeSubtitleSpan.textContent = inputSizeSubtitle.value;
+});
+
+inputSizeText.addEventListener('input', function() {
+    inputSizeTextSpan.textContent = inputSizeText.value;
+});
