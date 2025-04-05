@@ -317,7 +317,7 @@ main section{
 /*Font-------------------------*/
 #theme-selector .font{
   width: 100px;
-  height: 100px;
+  height: 70px;
 
   display: flex;
   flex-direction:row;
@@ -387,7 +387,7 @@ main section{
     --colorBorder: #eeeeee;
     --colorShadow: none;
   
-    --colorCustom: #37352f; 
+    --colorCustom: #474747; 
   
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Bebas Neue', cursive;
