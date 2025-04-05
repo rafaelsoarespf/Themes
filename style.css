@@ -39,19 +39,19 @@
   padding: 20px;
   border: 1px solid var(--colorBorder);
   border-radius: 10px;
-  box-shadow: 0px 1px 12px var(--colorShadow);
+  box-shadow: 0px 1px 10px var(--colorShadow);
 }
 
 .box2{
   background-color: var(--colorBox2);
-  padding: 20px;
+  padding: 15px;
   border: 1px solid var(--colorBorder);
   border-radius: 10px;
 }
 
 .box3{
   background-color: var(--colorBox3);
-  padding: 20px;
+  padding: 5px;
   border: 1px solid var(--colorBorder);
   border-radius: 10px;
 }
@@ -175,31 +175,48 @@ main section{
   margin: auto;
 }
 
-/*section(1) section-setting =======================================================================*/
-#section-setting p{
-  font: var(--fontText);
+main p{
+  margin-bottom: 0px;
 }
 
-/*section(1) section-setting - color----------------------------------------------------------------*/
+/*section(1) setting =======================================================================*/
+
+
+/*color------------------------------*/
+#settings-colors{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+
 .color-setting-div-input{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
+  background-color: var(--colorBox2);
+  margin-bottom: 5px;
+  padding: 0px 0px 10px 0px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.color-setting-div-input:hover{
+  background-color: var(--colorBox3);
 }
 
 .color-setting-div-input > input[type="color"] {
   -webkit-appearance: none; /* Remove o estilo no Chrome/Safari */
   -moz-appearance: none; /* Remove o estilo no Firefox */
   appearance: none; /* Remove o estilo nativo em outros navegadores */
-  
-  margin-right: 5px;
+  margin: 0px 0px 5px 0px;
   background-color: none;
-  width: 96px;
-  height: 40px;
+  width: 320px;
+  height: 75px;
   border: none;
-  border-radius: 5px;
+  border-radius: 5px 5px 0px 0px;
   outline: none;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
