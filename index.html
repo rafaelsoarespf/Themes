@@ -137,17 +137,17 @@
                     
                     <!--Title Size-->
                     <div class="fonts-setting-div-input">
-                        <label for="input-size-title">Tamanho(px): </label>
-                        <input type="number" id="input-size-title" name="input-size-title" min="4" max="128"  value="40" onchange="changeFont('title')">
+                        <label for="input-size-title">Tamanho(rem): </label>
+                        <input type="number" id="input-size-title" name="input-size-title" min="0.5" max="5" step="0.1" value="2.8" onchange="changeFont('title')">
                     </div>
                     <!--Title Weight-->
                     <div class="fonts-setting-div-input">
                         <label for="input-weight-title"> Peso: </label>
                         <select id="input-weight-title" name="input-weight-title" onchange="changeFont('title')">                    
-                                <option value="lighter" >fino</option>
-                                <option value="normal">normal</option>
-                                <option value="bold" selected>negrito</option>
-                                <option value="bolder">negrito+</option>
+                                <option value="lighter" >Fino</option>
+                                <option value="normal">Normal</option>
+                                <option value="bold" selected>Negrito</option>
+                                <option value="bolder">Negrito+</option>
                         </select>
                     </div>
                     <!--Títle Style-->
@@ -183,17 +183,17 @@
                     </div>
                     <!--Subtítle Size-->
                     <div class="fonts-setting-div-input">
-                        <label for="input-size-subtitle">Tamanho(px): </label>
-                        <input type="number" id="input-size-subtitle" name="input-size-subtitle" min="4" max="128" value="32" onchange="changeFont('subtitle')">
+                        <label for="input-size-subtitle">Tamanho(rem): </label>
+                        <input type="number" id="input-size-subtitle" name="input-size-subtitle" min="0.5" max="5" step="0.1" value="2" onchange="changeFont('subtitle')">
                     </div>
                     <!--Subtítle Weight-->
                     <div class="fonts-setting-div-input">
                         <label for="input-weight-subtitle"> Peso: </label>
                         <select id="input-weight-subtitle" name="input-weight-subtitle" onchange="changeFont('subtitle')">                    
-                                <option value="lighter">fino</option>
-                                <option value="normal" selected>normal</option>
-                                <option value="bold">negrito</option>
-                                <option value="bolder">negrito+</option>
+                                <option value="lighter">Fino</option>
+                                <option value="normal" selected>Normal</option>
+                                <option value="bold">Negrito</option>
+                                <option value="bolder">Negrito+</option>
                         </select>
                     </div>
                     <!--Subtítle Style-->
@@ -229,17 +229,17 @@
                     </div>
                     <!--Text Stextize-->
                     <div class="fonts-setting-div-input">
-                        <label for="input-size-text">Tamanho(px): </label>
-                        <input id="input-size-text" name="input-size-text" type="number" min="4" max="128" value="20" onchange="changeFont('text')">
+                        <label for="input-size-text">Tamanho(rem): </label>
+                        <input id="input-size-text" name="input-size-text" type="number" min="0.5" max="5" step="0.1" value="1" onchange="changeFont('text')">
                     </div>
                     <!--Text Weight-->
                     <div class="fonts-setting-div-input">
                         <label for="input-weight-text"> Peso: </label>
                         <select id="input-weight-text" name="input-weight-text" onchange="changeFont('text')">                    
-                                <option value="lighter">fino</option>
-                                <option value="normal" selected>normal</option>
-                                <option value="bold">negrito</option>
-                                <option value="bolder">negrito+</option>
+                                <option value="lighter">Fino</option>
+                                <option value="normal" selected>Normal</option>
+                                <option value="bold">Negrito</option>
+                                <option value="bolder">Negrito+</option>
                         </select>
                     </div>
                     <!--Text Style-->
@@ -259,10 +259,10 @@
         <!--section theme-selector--------------------------------------------------------------------------------------------------------------->
         <section id="theme-selector">
             
-            <!--Light Color-->
+            <!--Light Theme-->
             <div class="box theme-selector-div-box mt-3">
-                <h2 class="subtitle">Light Color</h2>
-                <p>Cores:</p>
+                <h2 class="subtitle">Tema Claro</h2>
+                <p class="text">Cores:</p>
                 <div class="theme-selector-div-colors">
                     <!--background-color-->
                     <div class="color text-black border-radios-right" onclick="copyColor('#ffffff')" style="background-color: #ffffff"><span>#ffffff</span><p class="vertical-text text-black">Background</p></div>
@@ -285,22 +285,22 @@
                     <!--custom-color-->
                     <div class="color text-white border-radios-left" onclick="copyColor('#474747')" style="background-color: #474747"><span>#474747</span><p class="vertical-text text-white">Cor de estilo</p></div>
                 </div>
-                <p>Fonte:</p>
+                <p class="text">Fonte:</p>
                 <div class="theme-selector-div-fonts">
                     <!--title-color-->
-                    <div class="font text-white border-radios-right" style="background-color: #37352f"><span>Arial 40px negrito</span><p class="horizontal-text text-white">Título</p></div>
+                    <div class="font text-white border-radios-right" style="background-color: #37352f"><span>Arial 2.8rem negrito</span><p class="horizontal-text text-white">Título</p></div>
                     <!--subtitle-color-->
-                    <div class="font text-white" style="background-color: #37352f"><span>Arial 2em normal</span><p class="horizontal-text text-white">Subtítulo</p></div>
+                    <div class="font text-white" style="background-color: #37352f"><span>Arial 2rem normal</span><p class="horizontal-text text-white">Subtítulo</p></div>
                     <!--text-color-->
-                    <div class="font text-white border-radios-left" style="background-color: #474747"><span>Arial 1em normal</span><p class="horizontal-text text-white">Texto</p></div>
+                    <div class="font text-white border-radios-left" style="background-color: #474747"><span>Arial 1rem normal</span><p class="horizontal-text text-white">Texto</p></div>
                 </div>
                 <button class="button" onclick="applyColorTheme('light-theme')">Aplicar</button>
             </div>
 
-            <!--Dark Color-->
+            <!--Dark Theme-->
             <div class="box theme-selector-div-box mt-3">
-                <h2 class="subtitle">Dark Color</h2>
-                <p>Cores:</p>
+                <h2 class="subtitle">Tema Escuro</h2>
+                <p class="text">Cores:</p>
                 <div class="theme-selector-div-colors">
                     <!--background-color-->
                     <div class="color text-white border-radios-right" onclick="copyColor('#191919')" style="background-color: #191919"><span>#191919</span><p class="vertical-text text-white">Background</p></div>
@@ -326,19 +326,19 @@
                 <p>Fonte:</p>
                 <div class="theme-selector-div-fonts">
                     <!--title-color-->
-                    <div class="font text-black border-radios-right" style="background-color: #d4d4d4"><span>Arial 40px negrito</span><p class="horizontal-text text-black">Título</p></div>
+                    <div class="font text-black border-radios-right" style="background-color: #d4d4d4"><span>Arial 2.8rem negrito</span><p class="horizontal-text text-black">Título</p></div>
                     <!--subtitle-color-->
-                    <div class="font text-black" style="background-color: #d4d4d4"><span>Arial 2em normal</span><p class="horizontal-text text-black">Subtítulo</p></div>
+                    <div class="font text-black" style="background-color: #d4d4d4"><span>Arial 2rem normal</span><p class="horizontal-text text-black">Subtítulo</p></div>
                     <!--text-color-->
-                    <div class="font text-black border-radios-left" style="background-color: #9b9b9b"><span>Arial 1em normal</span><p class="horizontal-text text-black">Texto</p></div>
+                    <div class="font text-black border-radios-left" style="background-color: #9b9b9b"><span>Arial 1rem normal</span><p class="horizontal-text text-black">Texto</p></div>
                 </div>
                 <button class="button" onclick="applyColorTheme('dark-theme')">Aplicar</button>
             </div>
 
-            <!--Rainbow  Color-->
+            <!--Rainbow Light Theme-->
             <div class="box theme-selector-div-box mt-3">
-                <h2 class="subtitle">Rainbow  Color</h2>
-                <p>Cores:</p>
+                <h2 class="subtitle">Tema Rainbow Light</h2>
+                <p class="text">Cores:</p>
                 <div class="theme-selector-div-colors">
                     <!--background-color-->
                     <div class="color text-white border-radios-right rainbow-background" onclick="copyColor('#8ea471, #77a8c2, #b667c2, #ba5f5f')"><span>#8ea471<br> #77a8c2<br> #b667c2<br> #ba5f5f</span><p class="vertical-text text-black">Background</p></div>
@@ -361,14 +361,14 @@
                     <!--custom-color-->
                     <div class="color text-white border-radios-left" onclick="copyColor('#0d6efd')" style="background-color: #0d6efd"><span>#0d6efd</span><p class="vertical-text text-white">Cor de estilo</p></div>
                 </div>
-                <p>Fonte:</p>
+                <p class="text">Fonte:</p>
                 <div class="theme-selector-div-fonts">
                     <!--title-color-->
-                    <div class="font text-white border-radios-right" style="background-color: #212529"><span>Arial 40px negrito</span><p class="horizontal-text text-white">Título</p></div>
+                    <div class="font text-white border-radios-right" style="background-color: #212529"><span>Arial 2.8rem negrito</span><p class="horizontal-text text-white">Título</p></div>
                     <!--subtitle-color-->
-                    <div class="font text-white" style="background-color: #212529"><span>Arial 2em normal</span><p class="horizontal-text text-white">Subtítulo</p></div>
+                    <div class="font text-white" style="background-color: #212529"><span>Arial 2rem normal</span><p class="horizontal-text text-white">Subtítulo</p></div>
                     <!--text-color-->
-                    <div class="font text-white border-radios-left" style="background-color: #212529"><span>Arial 1em normal</span><p class="horizontal-text text-white">Texto</p></div>
+                    <div class="font text-white border-radios-left" style="background-color: #212529"><span>Arial 1rem normal</span><p class="horizontal-text text-white">Texto</p></div>
                 </div>
                 <button class="button" onclick="applyColorTheme('rainbow-theme')">Aplicar</button>
             </div>

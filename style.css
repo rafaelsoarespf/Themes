@@ -244,6 +244,10 @@ main section{
   gap: 10px;
 }
 
+#theme-selector p{
+  margin-bottom: 0px;
+}
+
 .theme-selector-div-box{
   flex: 1 1 auto;
   width: 590px;
@@ -278,11 +282,17 @@ main section{
   width: 100%;
 }
 
-#theme-selector .color span,
+#theme-selector .color span {
+  opacity: 0; 
+  transition: opacity 0.5s ease;
+  font: 400 20px monospace;
+  position: absolute;
+}
+
 #theme-selector .font span {
   opacity: 0; 
   transition: opacity 0.5s ease;
-  font: 400 1.1rem monospace;
+  font: 400 16px monospace;
   position: absolute;
 }
 
@@ -317,7 +327,7 @@ main section{
 /*Font-------------------------*/
 #theme-selector .font{
   width: 100px;
-  height: 70px;
+  height: 30px;
 
   display: flex;
   flex-direction:row;
@@ -333,6 +343,7 @@ main section{
   opacity: 0.3;
   transition: opacity 1s ease, visibility 4s 5s;
   white-space: nowrap;
+  align-items: center;
 }
 
 #theme-selector .font:hover .horizontal-text{
@@ -374,54 +385,65 @@ main section{
               Temas
   --------------------------------------*/
 
-  .light-theme:root{
-    --colorBackground: #ffffff;
-    --colorBox: #f9f9f9;
-    --colorBox2: #f0f0f0;
-    --colorBox3: #dddddd;
+.light-theme:root{
+  --colorBackground: #ffffff;
+  --colorBox: #f9f9f9;
+  --colorBox2: #f0f0f0;
+  --colorBox3: #dddddd;
+
+  --colorTitle: #37352f;
+  --colorSubtitle: #37352f;
+  --colorText: #474747;
   
-    --colorTitle: #37352f;
-    --colorSubtitle: #37352f;
-    --colorText: #474747;
-    
-    --colorBorder: #eeeeee;
-    --colorShadow: none;
+  --colorBorder: #eeeeee;
+  --colorShadow: none;
+
+  --colorCustom: #474747; 
+
+  /*Font Variables*/
+  --fontTitle: normal bold 2.8em Arial, Verdana, Helvetica, sans-serif;
+  --fontSubtitle: normal normal 2em Arial, Verdana, Helvetica, sans-serif;
+  --fontText: normal normal 1em Arial, Verdana, Helvetica, sans-serif;
+}
   
-    --colorCustom: #474747; 
+.dark-theme:root{
+  --colorBackground: #191919;
+  --colorBox: #202020;
+  --colorBox2: #2c2c2c;
+  --colorBox3: #383838;
+
+  --colorTitle: #d4d4d4;
+  --colorSubtitle: #d4d4d4;
+  --colorText: #9b9b9b;
+
+  --colorBorder: #4d4d4d;
+  --colorShadow: none;
   
-    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-    --fonte-destaque: 'Bebas Neue', cursive;
-    --fonte-android: 'idroid', cursive;
-  }
+  --colorCustom: #d4d4d4;
+
+  /*Font Variables*/
+  --fontTitle: normal bold 2.8em Arial, Verdana, Helvetica, sans-serif;
+  --fontSubtitle: normal normal 2em Arial, Verdana, Helvetica, sans-serif;
+  --fontText: normal normal 1em Arial, Verdana, Helvetica, sans-serif;
+}
   
-  .dark-theme:root{
-    --colorBackground: #191919;
-    --colorBox: #202020;
-    --colorBox2: #2c2c2c;
-    --colorBox3: #383838;
+.rainbow-theme:root{
+  --colorBackground: #ffffff; /*linear-gradient(90deg, #8ea471, #77a8c2, #b667c2, #ba5f5f);*/
+  --colorBox: #ffffffcc;
+  --colorBox2: #ffffff;
+  --colorBox3: #eeeeee;
+
+  --colorTitle: #212529;
+  --colorSubtitle: #212529;
+  --colorText: #212529;
+
+  --colorBorder: #dee2e6;
+  --colorShadow: none;
   
-    --colorTitle: #d4d4d4;
-    --colorSubtitle: #d4d4d4;
-    --colorText: #9b9b9b;
-  
-    --colorBorder: #4d4d4d;
-    --colorShadow: none;
-    
-    --colorCustom: #d4d4d4;
-  }
-  
-  .rainbow-theme:root{
-    --colorBackground: none; /*linear-gradient(90deg, #8ea471, #77a8c2, #b667c2, #ba5f5f);*/
-    --colorBox: #ffffffcc;
-    --colorBox2: #ffffff;
-    --colorBox3: #eeeeee;
-  
-    --colorTitle: #212529;
-    --colorSubtitle: #212529;
-    --colorText: #212529;
-  
-    --colorBorder: #dee2e6;
-    --colorShadow: none;
-    
-    --colorCustom: #0d6efd;
-  }
+  --colorCustom: #0d6efd;
+
+  /*Font Variables*/
+  --fontTitle: normal bold 2.8em Arial, Verdana, Helvetica, sans-serif;
+  --fontSubtitle: normal normal 2em Arial, Verdana, Helvetica, sans-serif;
+  --fontText: normal normal 1em Arial, Verdana, Helvetica, sans-serif;
+}

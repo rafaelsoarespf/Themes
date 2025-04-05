@@ -85,7 +85,7 @@ function changeFont(element){
             sizeTitle = document.querySelector('#input-size-title').value;
             weightTitle = document.querySelector('#input-weight-title').value;
             styleTitle = document.querySelector('#input-style-title').value;
-            document.documentElement.style.setProperty('--fontTitle', `${styleTitle} ${weightTitle} ${sizeTitle}px ${fontTitle}`);
+            document.documentElement.style.setProperty('--fontTitle', `${styleTitle} ${weightTitle} ${sizeTitle}rem ${fontTitle}`);
             break;
 
         //subtitle
@@ -94,7 +94,7 @@ function changeFont(element){
             sizeSubtitle = document.querySelector('#input-size-subtitle').value;
             weightSubtitle = document.querySelector('#input-weight-subtitle').value;
             styleSubtitle = document.querySelector('#input-style-subtitle').value;
-            document.documentElement.style.setProperty('--fontSubtitle', `${styleSubtitle} ${weightSubtitle} ${sizeSubtitle}px ${fontSubtitle}`);
+            document.documentElement.style.setProperty('--fontSubtitle', `${styleSubtitle} ${weightSubtitle} ${sizeSubtitle}rem ${fontSubtitle}`);
 
         //text
         case "text":
@@ -102,7 +102,7 @@ function changeFont(element){
             sizeText = document.querySelector('#input-size-text').value;
             weightText = document.querySelector('#input-weight-text').value;
             styleText = document.querySelector('#input-style-text').value;
-            document.documentElement.style.setProperty('--fontText', `${styleText} ${weightText} ${sizeText}px ${fontText}`);
+            document.documentElement.style.setProperty('--fontText', `${styleText} ${weightText} ${sizeText}rem ${fontText}`);
     }
 }
 //===========================================================================================
@@ -117,6 +117,10 @@ function resetTheme(){
     document.documentElement.style.setProperty('--colorBorder', null || '');
     document.documentElement.style.setProperty('--colorShadow', null || '');
     document.documentElement.style.setProperty('--colorCustom', null || '');
+
+    document.documentElement.style.setProperty('--fontTitle', null || '');
+    document.documentElement.style.setProperty('--fontSubtitle', null || '');
+    document.documentElement.style.setProperty('--fontText', null || '');
 
     document.querySelector('#checkbox-title-color').checked = false;
     document.querySelector('#checkbox-subtitle-color').checked = false;
@@ -134,8 +138,8 @@ function updateColorInput(){
     let colorBorder = getComputedStyle(document.documentElement).getPropertyValue('--colorBorder').trim();
     let colorShadow = getComputedStyle(document.documentElement).getPropertyValue('--colorShadow').trim();
     let colorCustom = getComputedStyle(document.documentElement).getPropertyValue('--colorCustom').trim();
-    
-    //alterando cor do input
+
+    //atualizando cor do input
     document.querySelector('#input-background-color').value = colorBackground;
     document.querySelector('#input-box-color').value = colorBox;
     document.querySelector('#input-box2-color').value = colorBox2;
@@ -147,7 +151,7 @@ function updateColorInput(){
     document.querySelector('#input-shadow-color').value = colorShadow;
     document.querySelector('#input-custom-color').value = colorCustom;
 
-    //alterando span de codigo de texto 
+    //atualizando span de codigo da cor 
     document.querySelector('#input-background-color-value').innerHTML = colorBackground;
     document.querySelector('#input-box-color-value').innerHTML = colorBox;
     document.querySelector('#input-box2-color-value').innerHTML = colorBox2;
@@ -158,6 +162,20 @@ function updateColorInput(){
     document.querySelector('#input-border-color-value').innerHTML = colorBorder;
     document.querySelector('#input-shadow-color-value').innerHTML = colorShadow;
     document.querySelector('#input-custom-color-value').innerHTML = colorCustom;
+
+    //atualizando inputs de font
+    document.querySelector('#input-font-title').value = 'Arial, Helvetica, sans-serif';
+    document.querySelector('#input-size-title').value = 2.8;
+    document.querySelector('#input-weight-title').value = 'bold';
+    
+    document.querySelector('#input-font-subtitle').value = 'Arial, Helvetica, sans-serif';
+    document.querySelector('#input-size-subtitle').value = 2;
+    document.querySelector('#input-weight-subtitle').value = 'normal';
+
+    document.querySelector('#input-font-text').value = 'Arial, Helvetica, sans-serif';
+    document.querySelector('#input-size-text').value = 1;
+    document.querySelector('#input-weight-text').value = 'normal';
+
 }
 //===========================================================================================
 function applyColorTheme(theme){
