@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="background">
     <!--HEADER (NAVBAR)-------------------------------------------------------------------------------------------------->
     <header>
         <!--LOGO-->
@@ -36,85 +36,86 @@
     <!-- MAIN -------------------------------------------------------------------------------------------------->
     <main>
 
-        <!--section color-setting ------------------------------------------------------------------------------>
-        <section class="color-setting-box">
-            <h1>Temas de cores</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eligendi. Ullam, accusantium praesentium quod ipsa possimus dolorem amet omnis error, unde, molestiae eius perferendis laboriosam corrupti neque maiores nisi. At.</p>
+        <!-- section-setting  ------------------------------------------------------------------------------>
+        <section id="section-setting"  class="box">
+            <h1 class="title">Temas de cores</h1>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eligendi. Ullam, accusantium praesentium quod ipsa possimus dolorem amet omnis error, unde, molestiae eius perferendis laboriosam corrupti neque maiores nisi. At.</p>
             
-            <div id="color-setting">
-            <div class="color-setting-box2">
-                <h2>Cores</h2>
-                <!--background-color-->
-                <div class="color-setting-div-input">
-                    <input type="color"  id="input-background-color" onchange="changeColor('input-background-color')" name="input-background-color" value="#ffffff" />
-                    <label for="input-background-color">Cor do background: <span id="input-background-color-value">#ffffff</span></label>
-                </div>
+            <div class="row">
+                <div class="box2 col">
+                    <h2 class="subtitle">Cores</h2>
+                    <!--background-color-->
+                    <div class="color-setting-div-input">
+                        <input type="color"  id="input-background-color" onchange="changeColor('input-background-color')" name="input-background-color" value="#ffffff" />
+                        <label for="input-background-color">Cor do background: <span id="input-background-color-value">#ffffff</span></label>
+                    </div>
 
-                <!--box-color-->
-                <div class="color-setting-div-input">
-                    <input type="color" id="input-box-color" onchange="changeColor('input-box-color')" name="input-box-color" value="#f9f9f9" />
-                    <label for="input-box-color">Box-color: <span id="input-box-color-value">#f9f9f9</span></label>
-                </div>
+                    <!--box-color-->
+                    <div class="color-setting-div-input">
+                        <input type="color" id="input-box-color" onchange="changeColor('input-box-color')" name="input-box-color" value="#f9f9f9" />
+                        <label for="input-box-color">Box-color: <span id="input-box-color-value">#f9f9f9</span></label>
+                        
+                    </div>
 
-                <!--box2-color-->
-                <div class="color-setting-div-input">
-                    <input type="color" id="input-box2-color" onchange="changeColor('input-box2-color')" name="input-box2-color" value="#f0f0f0" />
-                    <label for="input-box2-color">Box2-color: <span id="input-box2-color-value">#f0f0f0</span></label>
-                </div>
+                    <!--box2-color-->
+                    <div class="color-setting-div-input">
+                        <input type="color" id="input-box2-color" onchange="changeColor('input-box2-color')" name="input-box2-color" value="#f0f0f0" />
+                        <label for="input-box2-color">Box2-color: <span id="input-box2-color-value">#f0f0f0</span></label>
+                    </div>
 
-                <!--box3-color-->
-                <div class="color-setting-div-input">
-                    <input type="color" id="input-box3-color" onchange="changeColor('input-box3-color')" name="input-box3-color" value="#dddddd" />
-                    <label for="input-box3-color">Box3-color: <span id="input-box3-color-value">#dddddd</span></label>
-                </div>
+                    <!--box3-color-->
+                    <div class="color-setting-div-input">
+                        <input type="color" id="input-box3-color" onchange="changeColor('input-box3-color')" name="input-box3-color" value="#dddddd" />
+                        <label for="input-box3-color">Box3-color: <span id="input-box3-color-value">#dddddd</span></label>
+                    </div>
 
-                <!--title-color-->
-                <div class="color-setting-div-input">
-                    <input type="color" id="input-title-color" onchange="changeColor('input-title-color')" name="input-title-color" value="#37352f" />
-                    <label for="input-title-color">Cor do Título: <span id="input-title-color-value">#37352f</span></label>
-                    <input type="checkbox" id="checkbox-title-color" onchange="useCustomColor('checkbox-title-color')"><label for="checkbox-title-color">Aplicar cor de estilo</label>
-                </div>
+                    <!--title-color-->
+                    <div class="color-setting-div-input">
+                        <input type="color" id="input-title-color" onchange="changeColor('input-title-color')" name="input-title-color" value="#37352f" />
+                        <label for="input-title-color">Cor do Título: <span id="input-title-color-value">#37352f</span></label>
+                        <input type="checkbox" id="checkbox-title-color" onchange="useCustomColor('checkbox-title-color')"><label for="checkbox-title-color">Aplicar cor de estilo</label>
+                    </div>
 
-                <!--subtitle-color-->
-                <div class="color-setting-div-input">
-                    <input type="color" id="input-subtitle-color" onchange="changeColor('input-subtitle-color')" name="input-subtitle-color" value="#37352f" />
-                    <label for="input-subtitle-color">Cor do Subtítulo: <span id="input-subtitle-color-value">#37352f</span></label>
-                    <input type="checkbox" id="checkbox-subtitle-color" onchange="useCustomColor('checkbox-subtitle-color')"><label for="checkbox-subtitle-color">Aplicar cor de estilo</label>
-                </div>
+                    <!--subtitle-color-->
+                    <div class="color-setting-div-input">
+                        <input type="color" id="input-subtitle-color" onchange="changeColor('input-subtitle-color')" name="input-subtitle-color" value="#37352f" />
+                        <label for="input-subtitle-color">Cor do Subtítulo: <span id="input-subtitle-color-value">#37352f</span></label>
+                        <input type="checkbox" id="checkbox-subtitle-color" onchange="useCustomColor('checkbox-subtitle-color')"><label for="checkbox-subtitle-color">Aplicar cor de estilo</label>
+                    </div>
 
-                <!--text-color-->
-                <div class="color-setting-div-input">
-                    <input type="color" id="input-text-color" onchange="changeColor('input-text-color')" name="input-text-color" value="#474747" />
-                    <label for="input-text-color">Cor do Texto: <span id="input-text-color-value">#474747</span></label>
-                </div>
+                    <!--text-color-->
+                    <div class="color-setting-div-input">
+                        <input type="color" id="input-text-color" onchange="changeColor('input-text-color')" name="input-text-color" value="#474747" />
+                        <label for="input-text-color">Cor do Texto: <span id="input-text-color-value">#474747</span></label>
+                    </div>
 
-                <!--border-color-->
-                <div class="color-setting-div-input">
-                    <input type="color" id="input-border-color" onchange="changeColor('input-border-color')" name="input-border-color" value="#eeeeee" />
-                    <label for="input-border-color">Cor da borda: <span id="input-border-color-value">#eeeeee</span></label>
-                    <input type="checkbox" id="checkbox-border-color" onchange="useCustomColor('checkbox-border-color')"><label for="checkbox-border-color">Aplicar cor de estilo</label>
-                </div>
+                    <!--border-color-->
+                    <div class="color-setting-div-input">
+                        <input type="color" id="input-border-color" onchange="changeColor('input-border-color')" name="input-border-color" value="#eeeeee" />
+                        <label for="input-border-color">Cor da borda: <span id="input-border-color-value">#eeeeee</span></label>
+                        <input type="checkbox" id="checkbox-border-color" onchange="useCustomColor('checkbox-border-color')"><label for="checkbox-border-color">Aplicar cor de estilo</label>
+                    </div>
 
-                <!--shadow-color-->
-                <div class="color-setting-div-input">
-                    <input type="color" id="input-shadow-color" onchange="changeColor('input-shadow-color')" name="input-shadow-color" value="none" />
-                    <label for="input-custom-color">Cor da sombra: <span id="input-shadow-color-value">none</span></label>
-                </div>
+                    <!--shadow-color-->
+                    <div class="color-setting-div-input">
+                        <input type="color" id="input-shadow-color" onchange="changeColor('input-shadow-color')" name="input-shadow-color" value="none" />
+                        <label for="input-custom-color">Cor da sombra: <span id="input-shadow-color-value">none</span></label>
+                    </div>
 
-                <!--custom-color-->
-                <div class="color-setting-div-input">
-                    <input type="color" id="input-custom-color" onchange="changeColor('input-custom-color')" name="input-custom-color" value="#474747" />
-                    <label for="input-custom-color">Cor de estilo: <span id="input-custom-color-value">#474747</span></label>
+                    <!--custom-color-->
+                    <div class="color-setting-div-input">
+                        <input type="color" id="input-custom-color" onchange="changeColor('input-custom-color')" name="input-custom-color" value="#474747" />
+                        <label for="input-custom-color">Cor de estilo: <span id="input-custom-color-value">#474747</span></label>
+                    </div>
                 </div>
-            </div>
 
             <!--Fonts--------------------------------------------------->
-            <div class="color-setting-box2">
+                <div class="col">
 
                 
                 <!--Títle-------------------->
-                <div>
-                    <h2>Título</h2>
+                <div class="box2" >
+                    <h2 class="subtitle">Título</h2>
                     <!--Title Font-->
                     <div class="fonts-setting-div-input">
                         <label for="input-font-title"> Fonte: </label>
@@ -160,8 +161,8 @@
                 </div>
 
                 <!--Subtítle-------------------->
-                <div>
-                    <h2>Subtítulo</h2>
+                <div class="box2 mt-2">
+                    <h2 class="subtitle">Subtítulo</h2>
                     <!--Subtítle Font-->
                     <div class="fonts-setting-div-input">
                         <label for="input-font-subtitle"> Fonte: </label>
@@ -206,8 +207,8 @@
                 </div>
 
                 <!--Text-------------------->
-                <div>
-                    <h2>Text</h2>
+                <div class="box2 mt-2">
+                    <h2 class="subtitle">Texto</h2>
                     <!--text Font-->
                     <div class="fonts-setting-div-input">
                         <label for="input-font-text"> Fonte: </label>
@@ -255,18 +256,14 @@
             </div>
         </section>
 
-        <!--Cor de modelo------------------------------------------------------------------------------------------------------------------------->
-        <section id="">
-            <div></div>
-        </section>
-
-        <!--section color-palettes--------------------------------------------------------------------------------------------------------------->
-        <section id="section-color-palettes">
-
+        <!--section theme-selector--------------------------------------------------------------------------------------------------------------->
+        <section id="theme-selector">
+            
             <!--Light Color-->
-            <div class="color-palettes-box mt-3">
-                <h2>Light Color</h2>
-                <div class="div-colors">
+            <div class="box theme-selector-div-box mt-3">
+                <h2 class="subtitle">Light Color</h2>
+                <p>Cores:</p>
+                <div class="theme-selector-div-colors">
                     <!--background-color-->
                     <div class="color text-black border-radios-right" onclick="copyColor('#ffffff')" style="background-color: #ffffff"><span>#ffffff</span><p class="vertical-text text-black">Background</p></div>
                     <!--box-color-->
@@ -288,13 +285,23 @@
                     <!--custom-color-->
                     <div class="color text-white border-radios-left" onclick="copyColor('#474747')" style="background-color: #474747"><span>#474747</span><p class="vertical-text text-white">Cor de estilo</p></div>
                 </div>
-                <button onclick="applyColorTheme('light-theme')">Aplicar</button>
+                <p>Fonte:</p>
+                <div class="theme-selector-div-fonts">
+                    <!--title-color-->
+                    <div class="font text-white border-radios-right" style="background-color: #37352f"><span>Arial 40px negrito</span><p class="horizontal-text text-white">Título</p></div>
+                    <!--subtitle-color-->
+                    <div class="font text-white" style="background-color: #37352f"><span>Arial 2em normal</span><p class="horizontal-text text-white">Subtítulo</p></div>
+                    <!--text-color-->
+                    <div class="font text-white border-radios-left" style="background-color: #474747"><span>Arial 1em normal</span><p class="horizontal-text text-white">Texto</p></div>
+                </div>
+                <button class="button" onclick="applyColorTheme('light-theme')">Aplicar</button>
             </div>
 
             <!--Dark Color-->
-            <div class="color-palettes-box mt-3">
-                <h2>Dark Color</h2>
-                <div class="div-colors">
+            <div class="box theme-selector-div-box mt-3">
+                <h2 class="subtitle">Dark Color</h2>
+                <p>Cores:</p>
+                <div class="theme-selector-div-colors">
                     <!--background-color-->
                     <div class="color text-white border-radios-right" onclick="copyColor('#191919')" style="background-color: #191919"><span>#191919</span><p class="vertical-text text-white">Background</p></div>
                     <!--box-color-->
@@ -316,13 +323,23 @@
                     <!--custom-color-->
                     <div class="color text-black border-radios-left" onclick="copyColor('#d4d4d4')" style="background-color: #d4d4d4"><span>#d4d4d4</span><p class="vertical-text text-black">Cor de estilo</p></div>
                 </div>
-                <button onclick="applyColorTheme('dark-theme')">Aplicar</button>
+                <p>Fonte:</p>
+                <div class="theme-selector-div-fonts">
+                    <!--title-color-->
+                    <div class="font text-black border-radios-right" style="background-color: #d4d4d4"><span>Arial 40px negrito</span><p class="horizontal-text text-black">Título</p></div>
+                    <!--subtitle-color-->
+                    <div class="font text-black" style="background-color: #d4d4d4"><span>Arial 2em normal</span><p class="horizontal-text text-black">Subtítulo</p></div>
+                    <!--text-color-->
+                    <div class="font text-black border-radios-left" style="background-color: #9b9b9b"><span>Arial 1em normal</span><p class="horizontal-text text-black">Texto</p></div>
+                </div>
+                <button class="button" onclick="applyColorTheme('dark-theme')">Aplicar</button>
             </div>
 
             <!--Rainbow  Color-->
-            <div class="color-palettes-box mt-3">
-                <h2>Rainbow  Color</h2>
-                <div class="div-colors">
+            <div class="box theme-selector-div-box mt-3">
+                <h2 class="subtitle">Rainbow  Color</h2>
+                <p>Cores:</p>
+                <div class="theme-selector-div-colors">
                     <!--background-color-->
                     <div class="color text-white border-radios-right rainbow-background" onclick="copyColor('#8ea471, #77a8c2, #b667c2, #ba5f5f')"><span>#8ea471<br> #77a8c2<br> #b667c2<br> #ba5f5f</span><p class="vertical-text text-black">Background</p></div>
                     <!--box-color-->
@@ -344,7 +361,16 @@
                     <!--custom-color-->
                     <div class="color text-white border-radios-left" onclick="copyColor('#0d6efd')" style="background-color: #0d6efd"><span>#0d6efd</span><p class="vertical-text text-white">Cor de estilo</p></div>
                 </div>
-                <button onclick="applyColorTheme('rainbow-theme')">Aplicar</button>
+                <p>Fonte:</p>
+                <div class="theme-selector-div-fonts">
+                    <!--title-color-->
+                    <div class="font text-white border-radios-right" style="background-color: #37352f"><span>Arial 40px negrito</span><p class="horizontal-text text-white">Título</p></div>
+                    <!--subtitle-color-->
+                    <div class="font text-white" style="background-color: #37352f"><span>Arial 2em normal</span><p class="horizontal-text text-white">Subtítulo</p></div>
+                    <!--text-color-->
+                    <div class="font text-white border-radios-left" style="background-color: #474747"><span>Arial 1em normal</span><p class="horizontal-text text-white">Texto</p></div>
+                </div>
+                <button class="button" onclick="applyColorTheme('rainbow-theme')">Aplicar</button>
             </div>
 
         </section>

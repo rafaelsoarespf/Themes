@@ -1,8 +1,8 @@
-/*Configurações gerais===============================================================*/
+/*General Settings====================================================================================*/
 @charset "UTF-8";
 
 :root{
-  /*Color*/
+  /*Color Variables */
   --colorBackground: #ffffff;
   --colorBox: #f9f9f9;
   --colorBox2: #f0f0f0;
@@ -17,20 +17,85 @@
 
   --colorCustom: #37352f; 
 
-  /*Font*/
+  /*Font Variables*/
   --fontTitle: normal bold 2.8em Arial, Verdana, Helvetica, sans-serif;
   --fontSubtitle: normal normal 2em Arial, Verdana, Helvetica, sans-serif;
   --fontText: normal normal 1em Arial, Verdana, Helvetica, sans-serif;
 }
 
 *{
-    margin: 0px;
-    padding:0px;
-  }
+  margin: 0px;
+  padding:0px;
+}
 
-body{
+/*General Classes Componets===========================================================================*/
+.background{
   background-color: var(--colorBackground) !important;
 }
+
+.box{
+  background-color: var(--colorBox);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--colorBorder);
+  border-radius: 10px;
+  box-shadow: 0px 1px 12px var(--colorShadow);
+}
+
+.box2{
+  background-color: var(--colorBox2);
+  padding: 20px;
+  border: 1px solid var(--colorBorder);
+  border-radius: 10px;
+}
+
+.box3{
+  background-color: var(--colorBox3);
+  padding: 20px;
+  border: 1px solid var(--colorBorder);
+  border-radius: 10px;
+}
+
+.title{
+  font: var(--fontTitle);
+  color: var(--colorTitle);
+}
+
+.subtitle{
+  font: var(--fontSubtitle);
+  color: var(--colorSubtitle);
+}
+
+.text{
+  font: var(--fontText);
+  color: var(--colorText);
+}
+
+.text-white{
+  color: #d4d4d4;
+}
+
+.text-black{
+  color: #37352f;
+}
+
+.button{
+  width: 100%;
+  height: 50px;
+  margin-top: 5px;
+  border: none;
+  background-color: var(--colorBox);
+  border-radius: 10px;
+  border: 1px  solid var(--colorCustom);
+  color: var(--colorCustom);
+  transition: background-color 0.5s;
+}
+
+.button:hover{
+  background-color: var(--colorCustom);
+  color: var(--colorBox);
+}
+
 
 /*header(navbar)============================================================================*/
 header{
@@ -88,19 +153,10 @@ header .logo{
 /*main================================================================================*/
 main{
   margin-top: 70px;
+  padding: 15px
 }
 
-main h1{
-  font: var(--fontTitle);
-  color: var(--colorTitle);
-}
-
-main h2, main h3{
-  font: var(--fontSubtitle);
-  color: var(--colorSubtitle);
-}
-
-main label, p{
+main label{
   color: var(--colorText);
 }
 
@@ -109,37 +165,12 @@ main section{
   margin: auto;
 }
 
-/*section(1) color-setting =======================================================================*/
-.color-setting-box{
-  background-color: var(--colorBox);
-  padding: 20px;
-  border: 1px solid var(--colorBorder);
-  border-radius: 10px;
-  box-shadow: 0px 1px 12px var(--colorShadow);
-}
-
-.color-setting-box p{
+/*section(1) section-setting =======================================================================*/
+#section-setting p{
   font: var(--fontText);
 }
 
-.color-setting-box h2{
-  color: var(--colorSubtitle);
-}
-
-#color-setting{
-  display: flex;
-}
-
-.color-setting-box2{
-  flex: 1;
-  padding: 10px;
-  margin: 0px 10px;
-  background-color: var(--colorBox2);
-  border: 1px solid var(--colorBorder);
-  border-radius: 15px;
-}
-
-/*section(1) color-setting =======================================================================*/
+/*section(1) section-setting - color----------------------------------------------------------------*/
 .color-setting-div-input{
   display: flex;
   align-items: center;
@@ -184,8 +215,7 @@ main section{
   height: 15px;
 }
 
-/*section(1) color-setting text =======================================================================*/
-
+/*section(1) color-setting - font --------------------------------------------------------------*/
 .fonts-setting-div-input{
   margin: 5px 0px;
 }
@@ -205,82 +235,64 @@ main section{
   font: var(--fontText);
 }
 
-/*section(2) color-palettes =======================================================================*/
-#section-color-palettes{
+/*section(2) theme-selector =======================================================================*/
+#theme-selector{
   display: flex;
   flex-direction:row;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 10px;
 }
 
-#section-color-palettes .color-palettes-box{
+.theme-selector-div-box{
+  flex: 1 1 auto;
   width: 590px;
-  padding: 20px;
-
-  background-color: var(--colorBox);
-  
-  border: 1px solid var(--colorBorder);
-  border-radius: 10px;
-  box-shadow: 0px 1px 12px var(--colorShadow);
+  max-width: 590px;
 }
 
-#section-color-palettes h2{
-  color: var(--colorSubtitle);
-}
-
-#section-color-palettes .div-colors{
+.theme-selector-div-colors,
+.theme-selector-div-fonts{
+  background-image: url('image/backgroundColorBox.png');
+  border-radius: 20px;
   display: flex;
   flex-direction:row;
   flex-wrap: nowrap;
-  flex-grow: 1;
   justify-items: stretch;
-
-  border-radius: 30px;
-  background-color: #ffffff;
-
   cursor: pointer;
-
-  background-image: url('image/backgroundColorBox.png')
 }
 
-#section-color-palettes .color{
-  width: 42px;
+/*Colors--------*/
+#theme-selector .color{
+  width: 30px;
   height: 180px;
-
   display: flex;
   flex-direction:row;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  
-  transition: width 0.5s ease-in-out; 
+  transition: width 0.4s ease-in-out;
 }
 
-#section-color-palettes .color:hover {
+#theme-selector .color:hover,
+#theme-selector .font:hover {
   width: 100%;
 }
 
-#section-color-palettes .color span {
+#theme-selector .color span,
+#theme-selector .font span {
   opacity: 0; 
   transition: opacity 0.5s ease;
-  font: 400 1.1em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font: 400 1.1rem monospace;
   position: absolute;
 }
 
-#section-color-palettes .color:hover span {
+#theme-selector .color:hover span,
+#theme-selector .font:hover span {
   position: relative;
   opacity: 1;
 }
 
-#section-color-palettes .color .text-white{
-  color: #f9f9f9;
-}
-
-#section-color-palettes .color .text-black{
-  color: #474747;
-}
-
-#section-color-palettes .vertical-text {
+#theme-selector .vertical-text {
   transform: rotate(90deg);
   font: bold 15px arial;
   opacity: 0.3;
@@ -289,36 +301,44 @@ main section{
   white-space: nowrap;
 }
 
-#section-color-palettes .color:hover .vertical-text{
+#theme-selector .color:hover .vertical-text{
   position: absolute;
   opacity: 0;
 }
 
-#section-color-palettes .border-radios-right{
+#theme-selector .border-radios-right{
   border-radius: 10px 0px 0px 10px;
 }
 
-#section-color-palettes .border-radios-left{
+#theme-selector .border-radios-left{
   border-radius: 0px 10px 10px 0px;
 }
 
-#section-color-palettes button{
-  width: 100%;
-  height: 50px;
-  margin-top: 5px;
-  border: none;
-  background-color: var(--colorBox);
-  border-radius: 10px;
-  border: 1px  solid var(--colorCustom);
-  color: var(--colorCustom);
-  transition: background-color 0.5s;
+/*Font-------------------------*/
+#theme-selector .font{
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  
+  transition: width 0.4s ease-in-out; 
 }
 
-#section-color-palettes button:hover{
-  background-color: var(--colorCustom);
-  color: var(--colorBox);
+#theme-selector .horizontal-text {
+  font: bold 15px arial;
+  opacity: 0.3;
+  transition: opacity 1s ease, visibility 4s 5s;
+  white-space: nowrap;
 }
 
+#theme-selector .font:hover .horizontal-text{
+  position: absolute;
+  opacity: 0;
+}
 
 /*--------------------------------------
             Wallpaper
