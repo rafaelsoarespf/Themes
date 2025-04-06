@@ -17,6 +17,10 @@
 
   --colorCustom: #37352f; 
 
+  --blur-box: blur(0px);
+  --blur-box2: blur(0px);
+  --blur-box3: blur(0px);
+
   /*Font Variables*/
   --fontTitle: normal bold 2.8em Arial, Verdana, Helvetica, sans-serif;
   --fontSubtitle: normal normal 2em Arial, Verdana, Helvetica, sans-serif;
@@ -40,6 +44,7 @@
   border: 1px solid var(--colorBorder);
   border-radius: 10px;
   box-shadow: 0px 1px 10px var(--colorShadow);
+  backdrop-filter: var(--blur-box);
 }
 
 .box2{
@@ -47,6 +52,7 @@
   padding: 15px;
   border: 1px solid var(--colorBorder);
   border-radius: 10px;
+  backdrop-filter: var(--blur-box2);
 }
 
 .box3{
@@ -54,6 +60,7 @@
   padding: 5px;
   border: 1px solid var(--colorBorder);
   border-radius: 10px;
+  backdrop-filter: var(--blur-box2);
 }
 
 .title{

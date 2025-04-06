@@ -59,7 +59,9 @@
                             <input type="color" id="input-box-color" onchange="changeColor('input-box-color')" name="input-box-color" value="#f9f9f9" />
                             <label for="input-box-color">Box-color: <span id="input-box-color-value">#f9f9f9</span></label>
                             <label for="input-box-transparency-color">Opacidade: <span id="input-box-transparency-color-value">1</span></label>
-                            <input type="range" class="form-range" id="input-box-transparency-color" name="input-box-transparency-color" min="0" max="1" step="0.01" value="0.5">
+                            <input type="range" class="form-range" id="input-box-transparency-color" name="input-box-transparency-color" min="0" max="1" step="0.01" value="1">
+                            <label for="input-box-blur">Acrílico: <span id="input-box-blur-value">0</span></label>
+                            <input type="range" class="form-range" id="input-box-blur" name="input-box-blur" min="0" max="100" value="0">
                         </div>
 
                         <!--box2-color-->
@@ -68,6 +70,8 @@
                             <label for="input-box2-color">Box2-color: <span id="input-box2-color-value">#f0f0f0</span></label>
                             <label for="input-box2-transparency-color">Opacidade: <span id="input-box2-transparency-color-value">1</span></label>
                             <input type="range" class="form-range" id="input-box2-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
+                            <label for="input-box2-blur">Acrílico: <span id="input-box2-blur-value">0</span></label>
+                            <input type="range" class="form-range" id="input-box2-blur" name="input-box2-blur" min="0" max="100" value="0">
                         </div>
 
                         <!--box3-color-->
@@ -76,6 +80,8 @@
                             <label for="input-box3-color">Box Selecionado: <span id="input-box3-color-value">#dddddd</span></label>
                             <label for="input-box3-transparency-color">Opacidade: <span id="input-box3-transparency-color-value">1</span></label>
                             <input type="range" class="form-range" id="input-box3-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
+                            <label for="input-box3-blur">Acrílico: <span id="input-box3-blur-value">0</span></label>
+                            <input type="range" class="form-range" id="input-box3-blur" name="input-box3-blur" min="0" max="100" value="0">
                         </div>
 
                         <!--title-color-->
@@ -86,7 +92,7 @@
                             <label for="input-title-transparency-color">Opacidade: <span id="input-title-transparency-color-value">1</span></label>
                             <input type="range" class="form-range" id="input-title-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
 
-                            <p><input type="checkbox" id="checkbox-title-color" onchange="useCustomColor('checkbox-title-color')"><label for="checkbox-title-color">Aplicar cor de estilo</label></p>
+                            <p><input type="checkbox" id="checkbox-title-color" onchange="useCustomColor('checkbox-title-color')"><label for="checkbox-title-color">Usar cor de estilo</label></p>
                         </div>
 
                         <!--subtitle-color-->
@@ -97,7 +103,7 @@
                             <label for="input-subtitle-transparency-color">Opacidade: <span id="input-subtitle-transparency-color-value">1</span></label>
                             <input type="range" class="form-range" id="input-subtitle-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
 
-                            <p><input type="checkbox" id="checkbox-subtitle-color" onchange="useCustomColor('checkbox-subtitle-color')"><label for="checkbox-subtitle-color">Aplicar cor de estilo</label></p>
+                            <p><input type="checkbox" id="checkbox-subtitle-color" onchange="useCustomColor('checkbox-subtitle-color')"><label for="checkbox-subtitle-color">Usar cor de estilo</label></p>
                         </div>
 
                         <!--text-color-->
@@ -117,7 +123,7 @@
                             <label for="input-border-transparency-color">Opacidade: <span id="input-border-transparency-color-value">1</span></label>
                             <input type="range" class="form-range" id="input-border-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
 
-                            <p><input type="checkbox" id="checkbox-border-color" onchange="useCustomColor('checkbox-border-color')"><label for="checkbox-border-color">Aplicar cor de estilo</label></p>
+                            <p><input type="checkbox" id="checkbox-border-color" onchange="useCustomColor('checkbox-border-color')"><label for="checkbox-border-color">Usar cor de estilo</label></p>
                         </div>
 
                         <!--shadow-color-->

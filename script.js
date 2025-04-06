@@ -28,7 +28,6 @@ const transparencyColorBorder = document.querySelector('#input-border-transparen
 const transparencyColorShadow = document.querySelector('#input-shadow-transparency-color');
 const transparencyColorCustom = document.querySelector('#input-custom-transparency-color');
 
-
 const transparencyColorBoxSpanValue = document.querySelector('#input-box-transparency-color-value');
 const transparencyColorBox2SpanValue = document.querySelector('#input-box2-transparency-color-value');
 const transparencyColorBox3SpanValue = document.querySelector('#input-box3-transparency-color-value');
@@ -38,6 +37,15 @@ const transparencyColorTextSpanValue = document.querySelector('#input-text-trans
 const transparencyColorBorderSpanValue = document.querySelector('#input-border-transparency-color-value');
 const transparencyColorShadowSpanValue = document.querySelector('#input-shadow-transparency-color-value');
 const transparencyColorCustomSpanValue = document.querySelector('#input-custom-transparency-color-value');
+
+//renge blur input-box3-blur
+const blurBox = document.querySelector('#input-box-blur');
+const blurBox2 = document.querySelector('#input-box2-blur');
+const blurBox3 = document.querySelector('#input-box3-blur');
+
+const blurBoxSpanValue = document.querySelector('#input-box-blur-value');
+const blurBox2SpanValue = document.querySelector('#input-box2-blur-value');
+const blurBox3SpanValue = document.querySelector('#input-box3-blur-value');
 
 //checkbox color
 const checkboxTitle = document.querySelector('#checkbox-title-color');
@@ -80,6 +88,7 @@ function changeColor(element){
         case "input-box-color":
             let boxColor = colorBox.value + hexadecimal(transparencyColorBox.value);   
             document.documentElement.style.setProperty('--colorBox', boxColor);
+            document.documentElement.style.setProperty('--blur-box', `blur( ${blurBox}px)`);
             colorBoxSpanValue.innerHTML = boxColor;
             break;
 
@@ -87,13 +96,15 @@ function changeColor(element){
         case "input-box2-color":
             let boxColor2 = colorBox2.value + hexadecimal(transparencyColorBox2.value);
             document.documentElement.style.setProperty('--colorBox2', boxColor2);
-            document.querySelector('#input-box2-color-value').innerHTML = (colorBox2.value + hexadecimal(transparencyColorBox2.value));
+            document.documentElement.style.setProperty('--blur-box2', `blur( ${blurBox2}px)`);
+            document.querySelector('#input-box2-color-value').innerHTML = boxColor2;
             break;
         
         //box3
         case "input-box3-color":
             let boxColor3 = colorBox3.value + hexadecimal(transparencyColorBox3.value);
             document.documentElement.style.setProperty('--colorBox3', boxColor3);
+            document.documentElement.style.setProperty('--blur-box3', `blur( ${blurBox3}px)`);
             document.querySelector('#input-box3-color-value').innerHTML = boxColor3;
             break;
 
@@ -145,9 +156,9 @@ function changeColor(element){
 }
 
 //section 1 - font=================================================================================
-//radio size number
+//input radio
 
-//trasparenc
+//trasparency
 transparencyColorBox.addEventListener('input', function() {
     transparencyColorBoxSpanValue.textContent = transparencyColorBox.value;
     changeColor("input-box-color");
@@ -193,6 +204,22 @@ transparencyColorCustom.addEventListener('input', function() {
     changeColor("input-custom-color");
 });
 
+//blur
+blurBox.addEventListener('input', function() {
+    blurBoxSpanValue.textContent = blurBox.value;
+    changeColor("input-box-color");
+});
+
+blurBox2.addEventListener('input', function() {
+    blurBox2SpanValue.textContent = blurBox2.value;
+    changeColor("input-box2-color");
+});
+
+blurBox3.addEventListener('input', function() {
+    blurBox3SpanValue.textContent = blurBox3.value;
+    changeColor("input-box3-color");
+});
+
 //font size
 fontSizeTitle.addEventListener('input', function() {
     inputSizeTitleSpan.textContent = fontSizeTitle.value;
@@ -205,9 +232,6 @@ fontSizeSubtitle.addEventListener('input', function() {
 fontSizeText.addEventListener('input', function() {
     inputSizeTextSpan.textContent = fontSizeText.value;
 });
-
-
-
 
 //section 1 - font ==========================================================================================
 //change font
