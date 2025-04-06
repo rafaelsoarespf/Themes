@@ -58,25 +58,34 @@
                         <div class="color-setting-div-input">
                             <input type="color" id="input-box-color" onchange="changeColor('input-box-color')" name="input-box-color" value="#f9f9f9" />
                             <label for="input-box-color">Box-color: <span id="input-box-color-value">#f9f9f9</span></label>
-                            
+                            <label for="input-box-transparency-color">Opacidade: <span id="input-box-transparency-color-value">1</span></label>
+                            <input type="range" class="form-range" id="input-box-transparency-color" name="input-box-transparency-color" min="0" max="1" step="0.01" value="0.5">
                         </div>
 
                         <!--box2-color-->
                         <div class="color-setting-div-input">
                             <input type="color" id="input-box2-color" onchange="changeColor('input-box2-color')" name="input-box2-color" value="#f0f0f0" />
                             <label for="input-box2-color">Box2-color: <span id="input-box2-color-value">#f0f0f0</span></label>
+                            <label for="input-box2-transparency-color">Opacidade: <span id="input-box2-transparency-color-value">1</span></label>
+                            <input type="range" class="form-range" id="input-box2-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
                         </div>
 
                         <!--box3-color-->
                         <div class="color-setting-div-input">
                             <input type="color" id="input-box3-color" onchange="changeColor('input-box3-color')" name="input-box3-color" value="#dddddd" />
                             <label for="input-box3-color">Box Selecionado: <span id="input-box3-color-value">#dddddd</span></label>
+                            <label for="input-box3-transparency-color">Opacidade: <span id="input-box3-transparency-color-value">1</span></label>
+                            <input type="range" class="form-range" id="input-box3-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
                         </div>
 
                         <!--title-color-->
                         <div class="color-setting-div-input">
                             <input type="color" id="input-title-color" onchange="changeColor('input-title-color')" name="input-title-color" value="#37352f" />
                             <label for="input-title-color">Título: <span id="input-title-color-value">#37352f</span></label>
+
+                            <label for="input-title-transparency-color">Opacidade: <span id="input-title-transparency-color-value">1</span></label>
+                            <input type="range" class="form-range" id="input-title-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
+
                             <p><input type="checkbox" id="checkbox-title-color" onchange="useCustomColor('checkbox-title-color')"><label for="checkbox-title-color">Aplicar cor de estilo</label></p>
                         </div>
 
@@ -84,6 +93,10 @@
                         <div class="color-setting-div-input">
                             <input type="color" id="input-subtitle-color" onchange="changeColor('input-subtitle-color')" name="input-subtitle-color" value="#37352f" />
                             <label for="input-subtitle-color">Subtítulo: <span id="input-subtitle-color-value">#37352f</span></label>
+
+                            <label for="input-subtitle-transparency-color">Opacidade: <span id="input-subtitle-transparency-color-value">1</span></label>
+                            <input type="range" class="form-range" id="input-subtitle-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
+
                             <p><input type="checkbox" id="checkbox-subtitle-color" onchange="useCustomColor('checkbox-subtitle-color')"><label for="checkbox-subtitle-color">Aplicar cor de estilo</label></p>
                         </div>
 
@@ -91,25 +104,36 @@
                         <div class="color-setting-div-input">
                             <input type="color" id="input-text-color" onchange="changeColor('input-text-color')" name="input-text-color" value="#474747" />
                             <label for="input-text-color">Texto: <span id="input-text-color-value">#474747</span></label>
+
+                            <label for="input-text-transparency-color">Opacidade: <span id="input-text-transparency-color-value">1</span></label>
+                            <input type="range" class="form-range" id="input-text-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
                         </div>
 
                         <!--border-color-->
                         <div class="color-setting-div-input">
                             <input type="color" id="input-border-color" onchange="changeColor('input-border-color')" name="input-border-color" value="#eeeeee" />
                             <label for="input-border-color">Borda: <span id="input-border-color-value">#eeeeee</span></label>
+                            
+                            <label for="input-border-transparency-color">Opacidade: <span id="input-border-transparency-color-value">1</span></label>
+                            <input type="range" class="form-range" id="input-border-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
+
                             <p><input type="checkbox" id="checkbox-border-color" onchange="useCustomColor('checkbox-border-color')"><label for="checkbox-border-color">Aplicar cor de estilo</label></p>
                         </div>
 
                         <!--shadow-color-->
                         <div class="color-setting-div-input">
                             <input type="color" id="input-shadow-color" onchange="changeColor('input-shadow-color')" name="input-shadow-color" value="none" />
-                            <label for="input-custom-color">Sombra: <span id="input-shadow-color-value">none</span></label>
+                            <label for="input-shadow-color">Sombra: <span id="input-shadow-color-value">none</span></label>
+                            <label for="input-shadow-transparency-color">Opacidade: <span id="input-shadow-transparency-color-value">1</span></label>
+                            <input type="range" class="form-range" id="input-shadow-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
                         </div>
 
                         <!--custom-color-->
                         <div class="color-setting-div-input">
                             <input type="color" id="input-custom-color" onchange="changeColor('input-custom-color')" name="input-custom-color" value="#474747" />
                             <label for="input-custom-color">⭐ Cor de estilo: <span id="input-custom-color-value">#474747</span></label>
+                            <label for="input-custom-transparency-color">Opacidade: <span id="input-custom-transparency-color-value">1</span></label>
+                            <input type="range" class="form-range" id="input-custom-transparency-color" name="alpha" min="0" max="1" step="0.01" value="1">
                         </div>
                     </div>
                 </div>
@@ -189,7 +213,7 @@
                     <!--Subtítle Size-->
                     <div class="fonts-setting-div-input">
                         <label for="input-size-subtitle">Tamanho(rem): <span id="input-size-subtitle-span">2</span></label>
-                        <input type="range" class="form-range" id="input-size-subtitle" name="input-size-subtitle" min="0.5" max="5" step="0.1" value="2" onchange="changeFont('subtitle')">
+                        <input type="range" class="form-range" id="input-size-subtitle" name="input-size-subtitle" min="0.5" max="3.5" step="0.1" value="2" onchange="changeFont('subtitle')">
                     </div>
                     <!--Subtítle Weight-->
                     <div class="fonts-setting-div-input">
@@ -235,7 +259,7 @@
                     <!--Text Stextize-->
                     <div class="fonts-setting-div-input">
                         <label for="input-size-text">Tamanho(rem): <span id="input-size-text-span">1</span></label>
-                        <input type="range" class="form-range" id="input-size-text" name="input-size-text" min="0.5" max="3" step="0.1" value="1" onchange="changeFont('text')">
+                        <input type="range" class="form-range" id="input-size-text" name="input-size-text" min="0.5" max="2" step="0.1" value="1" onchange="changeFont('text')">
                     </div>
                     <!--Text Weight-->
                     <div class="fonts-setting-div-input">
