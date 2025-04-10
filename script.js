@@ -391,6 +391,13 @@ function useCustomColor(elemento){
 
 //===========================================================================================
 function copyColor(textColor){
+    
+    //div alert copy text
+    divAlertCopyText = document.querySelector('#div-alert-copy-text')
+    divAlertCopyText.style.setProperty('display','block');
+    setTimeout(() => { divAlertCopyText.style.setProperty('display','none')},1000)
+
+    //copy text
     navigator.clipboard.writeText(textColor)
 }
 

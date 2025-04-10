@@ -186,6 +186,16 @@ main p{
   margin-bottom: 0px;
 }
 
+/**/
+
+#div-alert-copy-text{
+  position: fixed;
+  width: 600px;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+}
+
 /*section(1) setting =======================================================================*/
 
 
