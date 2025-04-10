@@ -47,10 +47,12 @@ const blurBoxSpanValue = document.querySelector('#input-box-blur-value');
 const blurBox2SpanValue = document.querySelector('#input-box2-blur-value');
 const blurBox3SpanValue = document.querySelector('#input-box3-blur-value');
 
-//checkbox color
+//checkbox
+const checkboxBackgroundRainbowColor = document.querySelector('#checkbox-background-rainbow-color');
 const checkboxTitle = document.querySelector('#checkbox-title-color');
 const checkboxSubtitle = document.querySelector('#checkbox-subtitle-color');
 const checkboxBorder = document.querySelector('#checkbox-border-color');
+
 
 //Fonts ---------------------------------------------------------------------------------------------------
 const fontTitle = document.querySelector('#input-font-title');
@@ -82,6 +84,8 @@ function changeColor(element){
         case "input-background-color":   
             document.documentElement.style.setProperty('--colorBackground', colorBackground.value);
             document.querySelector('#input-background-color-value').innerHTML = colorBackground.value;
+            checkboxBackgroundRainbowColor.checked = false;
+            useCustomColor('checkbox-background-rainbow-color');
             break;
         
         //box
@@ -162,6 +166,7 @@ function changeColor(element){
 transparencyColorBox.addEventListener('input', function() {
     transparencyColorBoxSpanValue.textContent = transparencyColorBox.value;
     changeColor("input-box-color");
+
 });
 
 transparencyColorBox2.addEventListener('input', function() {
@@ -273,6 +278,7 @@ function resetTheme(){
     document.querySelector('#checkbox-title-color').checked = false;
     document.querySelector('#checkbox-subtitle-color').checked = false;
     document.querySelector('#checkbox-border-color').checked = false;
+    checkboxBackgroundRainbowColor.checked = false;
 }
 //===========================================================================================
 function updateColorInput(){
@@ -326,10 +332,11 @@ function updateColorInput(){
 
 
     //radio span
-    inputSizeTitleSpan.textContent = inputSizeTitle.value;
-    inputSizeSubtitleSpan.textContent = inputSizeSubtitle.value;
-    inputSizeTextSpan.textContent = inputSizeText.value;
+    inputSizeTitleSpan.textContent = fontSizeTitle.value;
+    inputSizeSubtitleSpan.textContent = fontSizeSubtitle.value;
+    inputSizeTextSpan.textContent = fontSizeText.value;
 }
+
 //===========================================================================================
 function applyColorTheme(theme){
 
@@ -348,8 +355,9 @@ function applyColorTheme(theme){
         $html.classList.add('dark-theme');      
     }
     if(theme=="rainbow-theme"){
-        $html.classList.add('rainbow-theme');
-        body.classList.add('rainbow-background');      
+        document.querySelector("#checkbox-background-rainbow-color").checked = true;
+        useCustomColor("checkbox-background-rainbow-color");
+        $html.classList.add('rainbow-theme');        
     }
 
     resetTheme();
@@ -384,6 +392,14 @@ function useCustomColor(elemento){
                 document.documentElement.style.setProperty('--colorBorder', 'var(--colorCustom)');
             }else{
                 changeColor("input-border-color")
+            }
+            break;
+
+        case "checkbox-background-rainbow-color":
+            if(checkboxBackgroundRainbowColor.checked){
+                document.querySelector('body').classList.add('rainbow-background');
+            }else{
+                document.querySelector('body').classList.remove('rainbow-background');
             }
             break;
     }    
